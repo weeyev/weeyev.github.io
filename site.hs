@@ -43,7 +43,7 @@ main = hakyllWith config $ do
             posts <- recentFirst =<< loadAll "posts/*"
             let archiveCtx =
                     listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Archives"            `mappend`
+                    constField "title" "Posts"            `mappend`
                     defaultContext
 
             makeItem ""
@@ -78,9 +78,12 @@ take5Bookmarks content =
     let allLines = lines content
         -- Skip frontmatter and find first <li>
         contentLines = dropWhile (not . isListItem) $ dropFrontmatter allLines
-        -- Take 5 bookmark items
-        bookmarks = takeNItems contentLines 5
-    in unlines bookmarks
+
+        allItems = collectAllItems contentLines
+        -- Take last 5 items
+        lastFive = reverse $ take 5 $ reverse allItems
+
+    in unlines $ concat lastFive
   where
     dropFrontmatter [] = []
     dropFrontmatter (l:ls)
@@ -93,6 +96,13 @@ take5Bookmarks content =
         | otherwise = dropFrontmatter' ls
     
     isListItem l = "<li class=\"post-item\"" `isInfixOf` l
+
+    collectAllItems [] = []
+    collectAllItems (l:ls)
+        | isListItem l = 
+            let (item,rest) = takeOneItem (l:ls)
+            in item: collectAllItems rest
+        | otherwise = collectAllItems ls
     
     takeNItems _ 0 = []
     takeNItems [] _ = []

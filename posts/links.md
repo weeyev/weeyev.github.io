@@ -3,7 +3,7 @@ title: bookmarks
 category: links
 date: 2025-10-27
 ---
-collection of interesting links on the web to visit later 
+collection of interesting links on the web to visit later, sorted in reverse chronological order of dates, taggging will be added soon!
 
 <ul class="post-list">
 <li class="post-item" style="list-style: none; margin-bottom: 15px;">
