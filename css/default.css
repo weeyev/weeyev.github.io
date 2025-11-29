@@ -306,3 +306,10 @@ figcaption {
     line-height: 1.5;
     margin: 0;
 }
+
+/* Separator Styles */
+hr.separator {
+    border: 0;
+    border-top: 1px dashed #555;
+    margin: 40px 0;
+}
