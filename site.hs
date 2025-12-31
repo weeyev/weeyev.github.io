@@ -1,6 +1,9 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 import           Control.Applicative ((<|>), empty)
+import           Data.Aeson                 (FromJSON, parseJSON, withObject, (.:), (.:?), decode)
+import qualified Data.ByteString.Lazy.Char8 as BSL
+import           System.Process             (callCommand)
 import           Data.List (isInfixOf)
 import           Data.Monoid (mappend)
 import           Hakyll
@@ -12,112 +15,114 @@ config = defaultConfiguration
   { destinationDirectory = "docs"
   }
 
+data Bookmark = Bookmark
+    { bookmarkTitle       :: String
+    , bookmarkUrl         :: String
+    , bookmarkDate        :: String
+    , bookmarkDomain      :: String
+    , bookmarkSnippet     :: String
+    , bookmarkToRead      :: Bool
+    , bookmarkSignalColor :: String
+    } deriving (Show)
+
+instance FromJSON Bookmark where
+    parseJSON = withObject "Bookmark" $ \v -> Bookmark
+        <$> v .: "title"
+        <*> v .: "url"
+        <*> v .: "date"
+        <*> v .: "domain"
+        <*> v .: "snippet"
+        <*> v .: "to_read"
+        <*> v .: "signal_color"
+
+bookmarkCtx :: Context Bookmark
+bookmarkCtx = 
+    field "title" (return . bookmarkTitle . itemBody) `mappend`
+    field "url" (return . bookmarkUrl . itemBody) `mappend`
+    field "date" (return . bookmarkDate . itemBody) `mappend`
+    field "domain" (return . bookmarkDomain . itemBody) `mappend`
+    field "snippet" (return . bookmarkSnippet . itemBody) `mappend`
+    field "toRead" (\item -> if bookmarkToRead (itemBody item) then return "true" else empty) `mappend`
+    field "signalColor" (return . bookmarkSignalColor . itemBody)
+
+loadBookmarks :: IO [Bookmark]
+loadBookmarks = do
+    jsonContent <- BSL.readFile "data/bookmarks.json"
+    let bookmarks = decode jsonContent :: Maybe [Bookmark]
+    case bookmarks of
+        Just b -> return b
+        Nothing -> return []
+
 main :: IO ()
-main = hakyllWith config $ do
-    match "images/*" $ do
-        route   idRoute
-        compile copyFileCompiler
+main = do
+    callCommand "python3 scripts/update_bookmarks.py"
+    bookmarks <- loadBookmarks
+    
+    -- Force recompile check
+    hakyllWith config $ do
+        match "images/*" $ do
+            route   idRoute
+            compile copyFileCompiler
 
-    match "css/*" $ do
-        route   idRoute
-        compile compressCssCompiler
+        match "css/*" $ do
+            route   idRoute
+            compile compressCssCompiler
 
-    match "projects.md" $ do
-        route   $ setExtension "html"
-        compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
-            >>= relativizeUrls
-
-
-
-    match "posts/*" $ do
-        route $ setExtension "html"
-        compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/post.html"    postCtx
-            >>= loadAndApplyTemplate "templates/default.html" postCtx
-            >>= relativizeUrls
-
-    create ["archive.html"] $ do
-        route idRoute
-        compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
-            let archiveCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Posts"            `mappend`
-                    defaultContext
-
-            makeItem ""
-                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+        match "projects.md" $ do
+            route   $ setExtension "html"
+            compile $ pandocCompiler
+                >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
+        match "posts/links.html" $ do
+            route idRoute
+            compile $ do
+                let ctx = listField "bookmarks" bookmarkCtx (mapM makeItem bookmarks) `mappend`
+                          constField "title" "Bookmarks" `mappend`
+                          defaultContext
+                getResourceBody
+                    >>= applyAsTemplate ctx
+                    >>= loadAndApplyTemplate "templates/default.html" ctx
+                    >>= relativizeUrls
 
-    match "index.html" $ do
-        route idRoute
-        compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
-            -- Load the raw markdown content directly
-            linksContent <- loadBody (fromFilePath "posts/links.md" :: Identifier)
-            let indexCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    constField "bookmarksPreview" (take5Bookmarks linksContent) `mappend`
-                    constField "title" "Home"                `mappend`
-                    defaultContext
-
-            getResourceBody
-                >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.html" indexCtx
+        match (fromGlob "posts/*" .&&. complement "posts/links.html") $ do
+            route $ setExtension "html"
+            compile $ pandocCompiler
+                >>= loadAndApplyTemplate "templates/post.html"    postCtx
+                >>= loadAndApplyTemplate "templates/default.html" postCtx
                 >>= relativizeUrls
 
-    match "templates/*" $ compile templateCompiler
+        create ["archive.html"] $ do
+            route idRoute
+            compile $ do
+                posts <- recentFirst =<< loadAll (fromGlob "posts/*.md")
+                let archiveCtx =
+                        listField "posts" postCtx (return posts) `mappend`
+                        constField "title" "Posts"            `mappend`
+                        defaultContext
 
+                makeItem ""
+                    >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
+                    >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+                    >>= relativizeUrls
 
---------------------------------------------------------------------------------
-take5Bookmarks :: String -> String
-take5Bookmarks content = 
-    let allLines = lines content
-        -- Skip frontmatter and find first <li>
-        contentLines = dropWhile (not . isListItem) $ dropFrontmatter allLines
+        match "index.html" $ do
+            route idRoute
+            compile $ do
+                posts <- recentFirst =<< loadAll (fromGlob "posts/*.md")
+                let indexCtx =
+                        listField "posts" postCtx (return $ take 10 posts) `mappend`
+                        listField "homeBookmarks" bookmarkCtx (mapM makeItem $ take 10 bookmarks) `mappend`
+                        constField "title" "Home"                `mappend`
+                        defaultContext
 
-        allItems = collectAllItems contentLines
-        -- Take last 5 items
-        lastFive = reverse $ take 5 $ reverse allItems
+                getResourceBody
+                    >>= applyAsTemplate indexCtx
+                    >>= loadAndApplyTemplate "templates/default.html" indexCtx
+                    >>= relativizeUrls
 
-    in unlines $ concat lastFive
-  where
-    dropFrontmatter [] = []
-    dropFrontmatter (l:ls)
-        | l == "---" = dropFrontmatter' ls
-        | otherwise = l:ls
-    
-    dropFrontmatter' [] = []
-    dropFrontmatter' (l:ls)
-        | l == "---" = ls
-        | otherwise = dropFrontmatter' ls
-    
-    isListItem l = "<li class=\"post-item\"" `isInfixOf` l
+        match "templates/*" $ compile templateCompiler
 
-    collectAllItems [] = []
-    collectAllItems (l:ls)
-        | isListItem l = 
-            let (item,rest) = takeOneItem (l:ls)
-            in item: collectAllItems rest
-        | otherwise = collectAllItems ls
-    
-    takeNItems _ 0 = []
-    takeNItems [] _ = []
-    takeNItems (l:ls) n
-        | "<li class=\"post-item\"" `isInfixOf` l =
-            let (item, rest) = takeOneItem (l:ls)
-            in item ++ takeNItems rest (n - 1)
-        | otherwise = takeNItems ls n
-    
-    takeOneItem [] = ([], [])
-    takeOneItem (l:ls)
-        | "</li>" `isInfixOf` l = ([l], ls)
-        | otherwise = 
-            let (rest, remaining) = takeOneItem ls
-            in (l:rest, remaining)
 
 --------------------------------------------------------------------------------
 postCtx :: Context String

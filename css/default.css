@@ -313,3 +313,44 @@ hr.separator {
     border-top: 1px dashed #555;
     margin: 40px 0;
 }
+
+/* Home Grid Layout */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* View All Button */
+.view-all-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.view-all-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.view-all-btn:hover {
+    background-color: #333;
+    border-color: #555;
+    color: #fff;
+    transform: translateY(-2px);
+}

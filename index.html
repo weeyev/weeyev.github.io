@@ -12,12 +12,28 @@ feel free to have a talk anytime on <a href="https://x.com/weeyev" target="_blan
 
 <hr class="separator">
 <h1>Posts</h1>
-$partial("templates/post-list.html")$
+<ul>
+$for(posts)$
+    <li style="margin-bottom: 10px;">
+        <a href="$url$" style="color: white; text-decoration: none;">$title$</a>
+        <span style="color: #888; font-size: 14px;"> - $date$</span>
+    </li>
+$endfor$
+</ul>
+<div class="view-all-container">
+    <a href="/archive.html" class="view-all-btn">View all posts</a>
+</div>
 
 <hr class="separator">
 <h1>Bookmarks</h1>
-<ul class="post-list">
-$bookmarksPreview$
+<ul>
+$for(homeBookmarks)$
+    <li style="margin-bottom: 10px;">
+        <a href="$url$" target="_blank" rel="noopener" style="color: white; text-decoration: none;">$title$</a>
+        <span style="color: #888; font-size: 14px;"> - $date$</span>
+    </li>
+$endfor$
 </ul>
-<p><a href="/posts/links.html">View all bookmarks →</a></p>
-
+<div class="view-all-container">
+    <a href="/posts/links.html" class="view-all-btn">View all bookmarks</a>
+</div>

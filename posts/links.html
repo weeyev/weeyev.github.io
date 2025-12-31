@@ -1,0 +1,31 @@
+collection of interesting links on the web to visit later, sorted in reverse chronological order of dates. powered by <a href="https://curius.app/vihan-tiwari">curius</a>.
+
+<div class="project-grid" id="bookmarks-list">
+$for(bookmarks)$
+<div class="project-card">
+    <div style="display: flex; align-items: flex-start;">
+        <span style="width: 10px; height: 10px; background-color: $signalColor$; border-radius: 50%; display: inline-block; margin-top: 8px; margin-right: 15px; flex-shrink: 0;"></span>
+        <div style="flex: 1;">
+            <h3 style="margin: 0 0 5px 0; font-size: 20px; line-height: 1.4;">
+                <a href="$url$" target="_blank" rel="noopener" style="color: white; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px;">$title$</a>
+            </h3>
+            
+            <div style="color: #888; font-size: 15px; margin-bottom: 12px;">
+                bookmark · Added on $date$
+            </div>
+            
+            $if(snippet)$
+            <p style="color: #ccc; font-size: 15px; line-height: 1.5; margin-bottom: 15px;">$snippet$</p>
+            $endif$
+
+            <div style="margin-top: auto; display: flex; align-items: center;">
+                $if(toRead)$
+                <span style="color: #aaa; font-size: 14px; margin-right: 10px;">to_read</span>
+                $endif$
+                <span style="color: #aaa; font-size: 14px;">$domain$</span>
+            </div>
+        </div>
+    </div>
+</div>
+$endfor$
+</div>
