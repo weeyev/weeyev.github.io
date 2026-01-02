@@ -1,7 +1,6 @@
 import requests
 import json
 from datetime import datetime
-from urllib.parse import urlparse
 import os
 
 API_URL = "https://curius.app/api/users/6447/searchLinks"
