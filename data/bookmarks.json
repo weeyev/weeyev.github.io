@@ -1,5 +1,60 @@
 [
   {
+    "title": "REAP- model pruning ",
+    "url": "https://www.cerebras.ai/blog/reap",
+    "date": "January 5, 2026",
+    "domain": "",
+    "snippet": "Cerebras Systems and U.S. Department of Energy Sign MOU to Accelerate the Genesis Mission and U.S. National AI Initiative. Read more >> OCT 16 2025 TL;DR: We introduce REAP (Router-weighted Expert...",
+    "full_snippet": "Cerebras Systems and U.S. Department of Energy Sign MOU to Accelerate the Genesis Mission and U.S. National AI Initiative. Read more >> OCT 16 2025 TL;DR: We introduce REAP (Router-weighted Expert Activation Pruning), a new one-shot method for compressing Mixture-of-Experts (MoE) language models. Our key finding is that for generative tasks like code generation pruning low-impact experts is fundamentally better than merging them. REAP removes up to 50% of experts from models as large as 1 trillion parameters while largely maintaining baseline model quality. For instance, with the\u00a0Qwen3-480B-Coder-FP8\u00a0model, REAP at 50% pruning retains 97.6% of its baseline non-agentic coding ability and 96.7% on the agentic SWE-Bench benchmark. We are open-sourcing the complete codebase and pruned model checkpoints on HuggingFace to encourage further research. Sparsely-activated Mixture-of-Experts (SMoE) models achieve their high quality by\u00a0decoupling their total parameter count from their computationa",
+    "to_read": true,
+    "signal_color": "#10b981",
+    "has_snippet": true
+  },
+  {
+    "title": "The Hidden Mathematics in Stranger Things - YouTube",
+    "url": "https://www.youtube.com/watch?v=_Y0smObqqhw",
+    "date": "January 4, 2026",
+    "domain": "",
+    "snippet": "Ellie Sleightholm explores the mathematical concepts in Stranger Things 5. The video analyzes Dustin's circle calculations and delves into complex equations from general relativity. Learn about the...",
+    "full_snippet": "Ellie Sleightholm explores the mathematical concepts in Stranger Things 5. The video analyzes Dustin's circle calculations and delves into complex equations from general relativity. Learn about the ADM split and Einstein's field equations, as they relate to wormholes. Follow along using the transcript. Ellie Sleightholm explores the mathematical concepts in Stranger Things 5. The video analyzes Dustin's circle calculations and delves into complex equations from general relativity. Learn about the ADM split and Einstein's field equations, as they relate to wormholes. Follow along using the transcript.",
+    "to_read": false,
+    "signal_color": "#ef4444",
+    "has_snippet": true
+  },
+  {
+    "title": "Visualizing transformers and attention | Talk for TNG Big Tech Day '24 - YouTube",
+    "url": "https://www.youtube.com/watch?v=KJtZARuO3JY",
+    "date": "January 4, 2026",
+    "domain": "",
+    "snippet": "Follow along using the transcript. Follow along using the transcript. New New New New ",
+    "full_snippet": "Follow along using the transcript. Follow along using the transcript. New New New New ",
+    "to_read": false,
+    "signal_color": "#ef4444",
+    "has_snippet": true
+  },
+  {
+    "title": "\u2018grokking (NN)\u2019 directory \u00b7 Gwern.net",
+    "url": "https://gwern.net/doc/ai/scaling/emergence/grokking/index",
+    "date": "January 3, 2026",
+    "domain": "",
+    "snippet": "Deep Learning Through A Telescoping Lens: A Simple Model Provides Empirical Insights On Grokking, Gradient Boosting & Beyond The slingshot helps with learning Emergent properties with repeated...",
+    "full_snippet": "Deep Learning Through A Telescoping Lens: A Simple Model Provides Empirical Insights On Grokking, Gradient Boosting & Beyond The slingshot helps with learning Emergent properties with repeated examples Grokking Modular Polynomials Learning to grok: Emergence of in-context learning and skill composition in modular arithmetic tasks Grokfast: Accelerated Grokking by Amplifying Slow Gradients Deep Grokking: Would Deep Neural Networks Generalize Better? Grokked Transformers are Implicit Reasoners: A Mechanistic Journey to the Edge of Generalization Unified View of Grokking, Double Descent and Emergent Abilities: A Perspective from Circuits Competition A Tale of Tails: Model Collapse as a Change of Scaling Laws Critical Data Size of Language Models from a Grokking Perspective Grokking Group Multiplication with Cosets Dichotomy of Early and Late Phase Implicit Biases Can Provably Induce Grokking Outliers with Opposing Signals Have an Outsized Effect on Neural Network Optimization Grokking Bey",
+    "to_read": true,
+    "signal_color": "#10b981",
+    "has_snippet": true
+  },
+  {
+    "title": "The Claude Bliss Attractor - by Scott Alexander",
+    "url": "https://www.astralcodexten.com/p/the-claude-bliss-attractor",
+    "date": "January 2, 2026",
+    "domain": "",
+    "snippet": "This is a reported phenomenon where if two copies of Claude talk to each other, they end up spiraling into rapturous discussion of spiritual bliss, Buddhism, and the nature of consciousness. From the...",
+    "full_snippet": "This is a reported phenomenon where if two copies of Claude talk to each other, they end up spiraling into rapturous discussion of spiritual bliss, Buddhism, and the nature of consciousness. From the system card: Anthropic swears they didn\u2019t do this on purpose; when they ask Claude why this keeps happening, Claude can\u2019t explain. Needless to say, this has made lots of people freak out / speculate wildly. I think there are already a few good partial explanations of this (especially Nostalgebraist here), but they deserve to be fleshed out and spread more fully. Let\u2019s start with an easier question: why do games of Chinese whispers with AI art usually end with monstrous caricatures of black people? AFAICT this was first discovered by Gene Kogan, who started with the Distracted Boyfriend meme and asked ChatGPT to \u201cgenerate the same photo 5 seconds in the future\u201d hundreds of times: At first, this worked as expected, generating (slightly distorted) scenes of how the Distracted Boyfriend situat",
+    "to_read": false,
+    "signal_color": "#ef4444",
+    "has_snippet": true
+  },
+  {
     "title": "Position: Categorical Deep Learning is an Algebraic Theory of All Architectures",
     "url": "https://arxiv.org/pdf/2402.15332",
     "date": "January 1, 2026",
