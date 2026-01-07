@@ -1,4 +1,6 @@
-<p style="font-size: 21px;">collection of interesting links on the web to visit later, sorted in reverse chronological order of dates. powered by <a href="https://curius.app/vihan-tiwari">curius</a>.</p>
+<p style="font-size: 21px;">collection of interesting links on the web to visit later, sorted in chronological order and fetched from the curius api, the daily sync happens at 12 am UTC</p>
+
+<input type="text" id="bookmark-search" placeholder="Search bookmarks..." style="width: 100%; padding: 12px; margin-bottom: 20px; font-size: 18px; border-radius: 6px; border: none; background-color: #FAF9F6; color: #1c1c1c; box-sizing: border-box;">
 
 <div class="project-grid" id="bookmarks-list">
 $for(bookmarks)$
@@ -29,3 +31,19 @@ $for(bookmarks)$
 </div>
 $endfor$
 </div>
+
+<script>
+    document.getElementById('bookmark-search').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const bookmarks = document.querySelectorAll('.project-card');
+        
+        bookmarks.forEach(card => {
+            const content = card.textContent.toLowerCase();
+            if (content.includes(searchTerm)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+</script>
