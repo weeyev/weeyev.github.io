@@ -78,6 +78,7 @@ main = do
             route idRoute
             compile $ do
                 let ctx = listField "bookmarks" bookmarkCtx (mapM makeItem bookmarks) `mappend`
+                          constField "bookmarkCount" (show $ length bookmarks) `mappend`
                           constField "title" "Bookmarks" `mappend`
                           defaultContext
                 getResourceBody

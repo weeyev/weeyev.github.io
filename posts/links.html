@@ -1,5 +1,7 @@
 <p style="font-size: 21px;">collection of interesting links on the web to visit later, sorted in chronological order and fetched from the curius api, the daily sync happens at 12 am UTC</p>
 
+<p style="font-size: 18px; color: #888; margin-bottom: 15px;">Total Bookmarks: <span id="total-count">$bookmarkCount$</span> | Showing: <span id="showing-count">$bookmarkCount$</span></p>
+
 <input type="text" id="bookmark-search" placeholder="Search bookmarks..." style="width: 100%; padding: 12px; margin-bottom: 20px; font-size: 18px; border-radius: 6px; border: none; background-color: #FAF9F6; color: #1c1c1c; box-sizing: border-box;">
 
 <div class="project-grid" id="bookmarks-list">
@@ -36,14 +38,18 @@ $endfor$
     document.getElementById('bookmark-search').addEventListener('input', function(e) {
         const searchTerm = e.target.value.toLowerCase();
         const bookmarks = document.querySelectorAll('.project-card');
+        let visibleCount = 0;
         
         bookmarks.forEach(card => {
             const content = card.textContent.toLowerCase();
             if (content.includes(searchTerm)) {
                 card.style.display = 'block';
+                visibleCount++;
             } else {
                 card.style.display = 'none';
             }
         });
+        
+        document.getElementById('showing-count').textContent = visibleCount;
     });
 </script>
