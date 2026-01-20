@@ -5,9 +5,6 @@ description: An experiment using agentic reinforcement training to evaluate judg
 readtime: 12 min read
 ---
 
-
-September 7, 2025 • 12 min read
-
 > From "never wasting a motivated moment" : recently I read about the concept in a blog by [@arb](https://twitter.com/arb8020) on twt [[link](https://arb8020.github.io/posts/motivated-moment/)] and it made me wonder if a similar event led to me tinkering around and eventually writing this blog, even though at times it gets hard to consciously stick to the idea but recently I have tried to work on fixing this with keeping the side project pipeline as free as possible to at least work on something out of the current heap of ideas instead of doing nothing with them,hence expect more of these random experiments (and some serious ones too) in the near future, moving onto the thoughts/results from the experiments on autoRL.
 
 ## Setup

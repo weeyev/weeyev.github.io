@@ -2,38 +2,35 @@
 title: index
 ---
 
+<p>i'm a cs undergrad student, my work is mainly focused on machine learning with graphs and more specifically with topological deep learning, researching on stuff sometimes.</p>
 
-<p style="font-size: 21px;">i'm a cs undergrad student,my work is mainly focused on machine learning with graphs and more specificially with topologicial deep learning, researching on stuff sometimes.
+<p>feel free to have a talk anytime on <a href="https://x.com/weeyev" target="_blank">twitter</a> or mail me at theweeye at proton dot me</p>
 
-<br>
-<br>
-feel free to have a talk anytime on <a href="https://x.com/weeyev" target="_blank">twitter </a> or mail me at theweeye at proton dot me</p>
+<h2>links</h2>
+<ul>
+    <li><a href="/projects.html">projects</a></li>
+    <li><a href="/archive.html">posts</a></li>
+    <li><a href="/posts/links.html">bookmarks</a></li>
+</ul>
 
-
-<hr class="separator">
-<h1>Posts</h1>
+<h2>posts</h2>
 <ul>
 $for(posts)$
-    <li style="margin-bottom: 10px;">
-        <a href="$url$" style="color: white; text-decoration: none;">$title$</a>
-        <span style="color: #888; font-size: 14px;"> - $date$</span>
-    </li>
+    <li><a href="$url$">$title$</a></li>
 $endfor$
 </ul>
 <div class="view-all-container">
     <a href="/archive.html" class="view-all-btn">View all posts</a>
 </div>
 
-<hr class="separator">
-<h1>Bookmarks</h1>
+<h2>bookmarks</h2>
 <ul>
 $for(homeBookmarks)$
-    <li style="margin-bottom: 10px;">
-        <a href="$url$" target="_blank" rel="noopener" style="color: white; text-decoration: none;">$title$</a>
-        <span style="color: #888; font-size: 14px;"> - $date$</span>
-    </li>
+    <li><a href="$url$" target="_blank" rel="noopener">$title$</a></li>
 $endfor$
 </ul>
 <div class="view-all-container">
     <a href="/posts/links.html" class="view-all-btn">View all bookmarks</a>
 </div>
+
+<hr>

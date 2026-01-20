@@ -64,6 +64,10 @@ main = do
             route   idRoute
             compile copyFileCompiler
 
+        match "pfp.png" $ do
+            route   idRoute
+            compile copyFileCompiler
+
         match "css/*" $ do
             route   idRoute
             compile compressCssCompiler
