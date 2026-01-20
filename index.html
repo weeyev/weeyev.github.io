@@ -6,31 +6,25 @@ title: index
 
 <p>feel free to have a talk anytime on <a href="https://x.com/weeyev" target="_blank">twitter</a> or mail me at theweeye at proton dot me</p>
 
-<h2>links</h2>
+<h2>Links</h2>
 <ul>
     <li><a href="/projects.html">projects</a></li>
     <li><a href="/archive.html">posts</a></li>
     <li><a href="/posts/links.html">bookmarks</a></li>
 </ul>
 
-<h2>posts</h2>
+<h2>Recent Posts</h2>
 <ul>
 $for(posts)$
     <li><a href="$url$">$title$</a></li>
 $endfor$
 </ul>
-<div class="view-all-container">
-    <a href="/archive.html" class="view-all-btn">View all posts</a>
-</div>
+<p class="see-more"><a href="/archive.html">See all posts →</a></p>
 
-<h2>bookmarks</h2>
+<h2>Recent Bookmarks</h2>
 <ul>
 $for(homeBookmarks)$
     <li><a href="$url$" target="_blank" rel="noopener">$title$</a></li>
 $endfor$
 </ul>
-<div class="view-all-container">
-    <a href="/posts/links.html" class="view-all-btn">View all bookmarks</a>
-</div>
-
-<hr>
+<p class="see-more"><a href="/posts/links.html">See all bookmarks →</a></p>

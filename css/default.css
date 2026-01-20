@@ -62,10 +62,6 @@ a:hover {
     margin: 0 auto;
 }
 
-#navigation {
-    display: none;
-}
-
 h1 {
     font-size: 1.5em;
     line-height: 1.3;
@@ -75,8 +71,7 @@ h1 {
 }
 
 h2 {
-    border-bottom: #ebdbb2 1px solid;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-top: 20px;
     margin: 0 0 15px 0;
     color: #ebdbb2;
@@ -183,7 +178,7 @@ hr.separator {
 
 /* Section titles - hide the auto-generated h1 on index */
 section > h1:first-child {
-    display: none;
+    display: block;
 }
 
 article {
@@ -232,29 +227,19 @@ section {
     margin: 0;
 }
 
-/* View All Button */
-.view-all-container {
-    margin-top: 20px;
-    text-align: center;
+/* See more link style */
+.see-more {
+    margin-top: 10px;
 }
 
-.view-all-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3c3836;
-    border: 1px solid #504945;
-    border-radius: 6px;
-    color: #fabd2f;
+.see-more a {
+    color: #928374;
     text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
-    transition: all 0.2s ease;
+    font-size: 0.95em;
 }
 
-.view-all-btn:hover {
-    background-color: #504945;
-    border-color: #fabd2f;
-    transform: translateY(-2px);
+.see-more a:hover {
+    color: #fabd2f;
 }
 
 /* Post list styles */
