@@ -7,7 +7,7 @@
    yellow:    #fabd2f
    orange:    #fe8019
    red:       #fb4934
-   green:     #b8bb26
+   green:     #fabd2f
    aqua:      #8ec07c
    blue:      #83a598
    purple:    #d3869b
@@ -22,7 +22,7 @@
 
 body {
     color: #ebdbb2;
-    background-color: #282828;
+    background-color: #000000;
     font-family: Arial, sans-serif;
     max-width: 750px;
     margin: 0 auto;
@@ -36,7 +36,8 @@ a {
 }
 
 a:hover {
-    color: #83a598;
+    color: #fabd2f;
+    text-shadow: 0 0 6px #fabd2f;
 }
 
 .info {
@@ -145,8 +146,8 @@ blockquote {
 
 /* Code Styling */
 pre {
-    background-color: #282828;
-    color: #fabd2f;
+    background-color: #1d2021;
+    color: #ebdbb2;
     border: 1px solid #fabd2f;
     padding: 1em;
     margin: 1em 0;
@@ -157,7 +158,7 @@ pre {
 code {
     font-family: Consolas, "Courier New", monospace;
     font-size: 0.95rem;
-    color: #fabd2f;
+    color: #ebdbb2;
 }
 
 pre code {
@@ -198,8 +199,8 @@ section {
 }
 
 .project-card {
-    background-color: #3c3836;
-    border: 1px solid #504945;
+    background-color: #1d2021;
+    border: 1px solid #fabd2f;
     padding: 25px;
     border-radius: 6px;
     transition: transform 0.2s ease, border-color 0.2s ease;
@@ -207,6 +208,7 @@ section {
 
 .project-card:hover {
     border-color: #fabd2f;
+    box-shadow: 0 0 8px #fabd2f;
     transform: translateY(-2px);
 }
 
