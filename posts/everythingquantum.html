@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>[weeye] - everything quantum</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <article>
+<div id="header">
+    <a href="../" class="pfp-link"><img src="../images/final.png" alt="weeye" class="center" width="50%"></a>
+</div>
+
+            <section>
+                <h1>everything quantum</h1>
+                <div class="info">
+    Posted on April 19, 2025 • 6 min read
+</div>
+
+<h2 id="purpose">Purpose</h2>
+<p>This is a brief overview for anyone who has just heard of quantum computing and can’t figure out where to start it. It’s overwhelming at first but I think this should be a good start to start tinkering around on your own. A number of other resources that I found personally helpful will be linked in the end.</p>
+<p>For any issues/ information that is quoted wrong, dm me on [x dot com]</p>
+<h2 id="quantum-computing-and-qiskit">Quantum Computing and Qiskit</h2>
+<p>Examples are the best way to learn anything so instead of the usual theory, lets keep this blog going based upon an example.</p>
+<h2 id="superposition">Superposition</h2>
+<p>Gates- Just like in boolean logic, gates take an input and then perform certain operations to it to eventually return the output. Similarly, the quantum gates are used to perform operations like superposition, entanglement on the qubits.</p>
+<p>In the perspective of our example, it is like putting the coin through a magic machine that gives it some magical powers. to make it start spinning, now for an observer it is quite blurry to determine which side is heads or tails at a given time instant. This is referred as a superposition of states (in our case heads and tails), now extending the same concept to a personal computer that you are using to read this. A usual 8gb ram is ~ equivalent to 64 billion bits- where each bit stores the encoding data in 0’s and 1’s, now at best the current quantum computers have around 1000 qubits where each qubit can encode the data in a state of both 0’s and 1’s at a given time like the case of the spinning coin, now according to the common miconception that this makes it faster in performance in general- it doesn’t, but yes in certain use cases this tremendously increases the computation power.</p>
+<p>Mathematically, a single state is represented by the dirac notation of bra and ket.</p>
+<pre><code>∣0⟩=( 
+1
+0
+​
+ ),∣1⟩=( 
+0
+1
+​
+ )</code></pre>
+<p>A superposed state of both of them is written by:</p>
+<pre><code>∣ψ⟩=α∣0⟩+β∣1⟩</code></pre>
+<p>A physical representation to distinguish between the two of them can be through the bloch sphere diagram. The same state can also be expressed as:</p>
+<pre><code>∣ψ⟩=cos(θ/2)∣0⟩+e 
+iϕ
+ sin(θ/2)∣1⟩</code></pre>
+<p>Where theta is the angle from z axis and psi is from x axis in the x-y plane. To visualise a few states: |0&gt; and |1&gt; lie on the north and south pole of the sphere respectively.</p>
+<p>The real power of computation with qubits comes when there are several of them- for example, imagine 2 qubits with their 4 basis states (00,01,10,11), 3 qubits with their eight states (000,001,010,100,011,110,101,111), n qubits with 2^n basis states.</p>
+<p><em>bit and qubit difference</em></p>
+<h2 id="entanglement">Entanglement</h2>
+<p>Lets continue our example of the spinning coin but this time instead of a single coin we have two of them in the same motion, now after some time the coins will eventually come to rest and reveal the real values. In a normal scenario theres always a chance that both the coins will have the same observed value((HH or TT), but in our case if the coins are entangled with each other (connnected to each other by imagine a string) the outcome of one influences the other. Hence if coin A lands Heads then the coin B has to land Tails.</p>
+<p>This helps in creating a superposition of multiple states - i.e, previously only the states 0 and 1 were superposed, now we can also superpose their basis states- 00 and 11 to get a measurement on the idea of both of them, in more complex and practical use cases this is what is done.</p>
+<h2 id="qiskit">Qiskit</h2>
+<p>Qiskit is a modern framework to implement the quantum computing principles in practice, developed by IBM in 2017.</p>
+<p>Gates- Just like in boolean logic, gates take an input and then perform certain operations to it to eventually return the output. Similarly, the quantum gates are used to perform operations like superposition, entanglement on the qubits.</p>
+<p>In the perspective of our example, it is like putting the coin through a magic machine that enriches it with some magical powers.</p>
+<p>The starter code for all these test demos remains same as:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install qiskit</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install numpy</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install qiskit_aer</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> qiskit <span class="im">import</span> QuantumCircuit, transpile</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> pi</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> qiskit_aer <span class="im">import</span> Aer</span></code></pre></div>
+<p>Few most commonly used gates are:</p>
+<p><strong>1) H (Hadamard Gate)</strong> - Used to superpose a given state into the superposed basis states.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>qc<span class="op">=</span>QuantumCircuit(<span class="dv">2</span>,<span class="dv">2</span>) <span class="co"># 2 qubits and 2 classical bits to store their information</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>qc.h(<span class="dv">0</span>) <span class="co">#puts qubit 0 into superposition</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>qc.draw()</span></code></pre></div>
+<p><em>superposed</em></p>
+<p><strong>2) X (Not Gate)</strong>- Flips the given state to its conjugate (eg &lt;0| to |1&gt;).</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>qc<span class="op">=</span>QuantumCircuit(<span class="dv">2</span>,<span class="dv">2</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>qc.x(<span class="dv">0</span>) <span class="co">#flips it from 0 to 1</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>qc.draw()</span></code></pre></div>
+<p><em>not</em></p>
+<p><strong>3) CX (Controlled Not Gate)</strong>- Takes in 2 states as input, where one is the control gate, the other is the target. It maintains the state of the control qubit and flips the state of the target qubit.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>qc<span class="op">=</span>QuantumCircuit(<span class="dv">2</span>,<span class="dv">2</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>qc.cx(<span class="dv">1</span>,<span class="dv">0</span>) <span class="co"># where 0 is the target bit and 1 is the control bit</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>qc.draw()</span></code></pre></div>
+<p><strong>4) RY (Rotational along Y axis gate)</strong>- Rotates the angle of a qubit by an angle theta along the y axis.</p>
+<p><strong>5) CRY(Controlled Rotation along Y axis gate)</strong>- Applies the rotation along y axis on the target qubit only if the control qubit has state |1&gt;.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>qc<span class="op">=</span>QuantumCircuit(<span class="dv">2</span>,<span class="dv">2</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>qc.cx(pi<span class="op">/</span><span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">1</span> <span class="co">#(angle, control, target)</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>qc.draw()</span></code></pre></div>
+<p><em>Blog image</em></p>
+<blockquote>
+<p><strong>NOTE</strong> - The Bell State is a special type that superposes and entangles a basis state at the same time, two most often used examples are:</p>
+<p>∣Ψ⁺⟩= ¹⁄√₂ (∣01⟩+∣10⟩)</p>
+<p>∣Ψ⁻⟩= ¹⁄√₂ (∣01⟩−∣10⟩)</p>
+</blockquote>
+<p>Now lets summarize all these up together to get a basic circuit diagram.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install qiskit</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install numpy</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install qiskit_aer</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> qiskit <span class="im">import</span> QuantumCircuit, transpile</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> pi</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> qiskit_aer <span class="im">import</span> Aer</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>qc<span class="op">=</span>QuantumCircuit(<span class="dv">2</span>,<span class="dv">2</span>) <span class="co">#defining a quantum circuit</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>qc.h(<span class="dv">0</span>) <span class="co">#puts the qubit 0 into its superposed states</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>qc.cx(<span class="dv">0</span>,<span class="dv">1</span>) <span class="co">#entangles both qubits, with 0 as control and 1 as target</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#^^^ initiates a bell state of psi+ ^^^</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>qc.ry(pi<span class="op">/</span><span class="dv">4</span>,<span class="dv">0</span>) <span class="co">#rotate qubit 0 by 45 degree</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>qc.cry(pi<span class="op">/</span><span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">0</span>) <span class="co">#rotate qubit 0 by 90 degree only if qubit 1 in state 1</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>qc.draw()</span></code></pre></div>
+<p>The final circuit output is:</p>
+<p><em>output</em></p>
+<p>Now, after we put a coin in superposition/ entangle it’s state, finally we have to stop it from spinning for determining what actually is the state. This is also called as measuring the circuit.</p>
+<p>To get the measurements after collapsing a circuit, we either use the simulator or run it on an actual IBM computer. Practically it is very cost-effective and time-consuming to work on a real quantum computer, and almost every time people use simulators to test/run their projects. We will also use a qasm simulator for this project to simulate the measurements; there are other simulators also for different purposes. An example of simulator usage in our program above is:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>qc.measure([<span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>])  </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>simulator <span class="op">=</span> Aer.get_backend(<span class="st">'qasm_simulator'</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>final<span class="op">=</span>transpile(qc, simulator)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>job <span class="op">=</span> simulator.run(final, shots<span class="op">=</span><span class="dv">1024</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> job.result()</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> result.get_counts(qc)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counts)</span></code></pre></div>
+<p>Output: {‘11’: 71, ‘01’: 77, ‘10’: 404, ‘00’: 472} -&gt; represents the count of each basis state out of 1024, clearly showing how 00 comes in more times during measurement.</p>
+<h2 id="references">References</h2>
+<p>All credits to the respective owners.</p>
+<ul>
+<li><a href="#">1) A gentle introduction to quantum computing</a></li>
+<li><a href="#">2) Introduction to Qiskit</a></li>
+<li><a href="#">3) Quantum Programming Language- interesting read</a></li>
+<li><a href="#">4) Overview of Qubits</a></li>
+<li><a href="#">5) Types of Quantum Computers</a></li>
+</ul>
+
+            </section>
+            
+            <footer id="footer">
+                Built with 
+                <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            </footer>
+        </article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+        function stripHighlighting(pre) {
+            var code = pre.querySelector('code');
+            if (code) {
+                code.innerHTML = code.textContent;
+            }
+        }
+        function detectLanguage(pre, code) {
+            var classes = [];
+            if (pre && pre.classList) {
+                classes = classes.concat(Array.from(pre.classList));
+            }
+            if (code && code.classList) {
+                classes = classes.concat(Array.from(code.classList));
+            }
+            for (var i = 0; i < classes.length; i++) {
+                var cls = classes[i];
+                if (cls && cls !== 'sourceCode') {
+                    return cls.toLowerCase();
+                }
+            }
+            return null;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('pre').forEach(function(pre) {
+                stripHighlighting(pre);
+                var code = pre.querySelector('code');
+                var lang = detectLanguage(pre, code);
+                if (lang && code) {
+                    code.className = 'language-' + lang;
+                }
+                if (pre.classList.contains('sourceCode')) {
+                    pre.classList.remove('sourceCode');
+                }
+            });
+            if (window.Prism) {
+                if (Prism.plugins && Prism.plugins.autoloader) {
+                    Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
+                }
+                Prism.highlightAll();
+            }
+        });
+    </script>
+    </body>
+</html>

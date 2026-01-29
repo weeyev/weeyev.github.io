@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>[weeye] - Home</title>
+        <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <article>
+<div id="header">
+    <a href="./" class="pfp-link"><img src="./images/final.png" alt="weeye" class="center" width="50%"></a>
+</div>
+
+            <section>
+                <h1>Home</h1>
+                <p>i'm a cs undergrad student, my work is mainly focused on machine learning with graphs and more specifically with topological deep learning, researching on stuff sometimes.</p>
+
+<p>feel free to have a talk anytime on <a href="https://x.com/weeyev" target="_blank">twitter</a> or mail me at theweeye at proton dot me</p>
+
+<h2>Links</h2>
+<ul>
+    <li><a href="./projects.html">projects</a></li>
+    <li><a href="./archive.html">posts</a></li>
+    <li><a href="./posts/links.html">bookmarks</a></li>
+</ul>
+
+<h2>Recent Posts</h2>
+<ul>
+
+    <li><a href="./posts/evaluators.html">evaluating your evaluators</a></li>
+
+    <li><a href="./posts/laplacians.html">laplacians</a></li>
+
+    <li><a href="./posts/brainfuck.html">why you should try brainfuck</a></li>
+
+    <li><a href="./posts/quscii.html">quscii</a></li>
+
+    <li><a href="./posts/everythingquantum.html">everything quantum</a></li>
+
+</ul>
+<p class="see-more"><a href="./archive.html">See all posts →</a></p>
+
+<h2>Recent Bookmarks</h2>
+<ul>
+
+    <li><a href="https://loud-phalange-7f5.notion.site/Eleven-years-in-AI-What-does-it-actually-mean-to-be-a-researcher-2d56d9bccef780038ae9c27ffab59404" target="_blank" rel="noopener">Eleven years in AI: What does it actually mean to be a researcher?</a></li>
+
+    <li><a href="https://babuschk.in/posts/2026-01-25-life-on-claude-nine.html" target="_blank" rel="noopener">Life on Claude Nine - Igor Babuschkin</a></li>
+
+    <li><a href="https://docs.google.com/document/d/1lz8PaTIXrfRsQtbWE0ta_qrpjZi6GUAErwJmmkBay2Y/edit?tab=t.0" target="_blank" rel="noopener">Five ways to be stupid- Le Cun</a></li>
+
+    <li><a href="https://ploum.net/2026-01-19-exam-with-chatbots.html" target="_blank" rel="noopener">Giving University Exams in the Age of Chatbots</a></li>
+
+    <li><a href="https://www.youtube.com/watch?v=h5G6Oc_V3Lw" target="_blank" rel="noopener">All 325+ Competing Consciousness Theories In One Video</a></li>
+
+    <li><a href="https://pub.sakana.ai/Unofficial_Guide" target="_blank" rel="noopener">An Unofficial Guide to Prepare for a Research Position Application</a></li>
+
+    <li><a href="https://berggruen.org/eu/news/the-mind-as-a-city-a-systems-view-of-consciousness-by-ian-reppel" target="_blank" rel="noopener">Berggruen Institute</a></li>
+
+    <li><a href="https://www.theparisreview.org/blog/2018/04/11/illicit-love-letters-albert-camus-and-maria-casares" target="_blank" rel="noopener">Illicit Love Letters: Albert Camus and Maria Casares</a></li>
+
+    <li><a href="https://www.theguardian.com/science/article/2024/aug/31/alexander-grothendieck-huawei-ai-artificial-intelligence" target="_blank" rel="noopener">‘He was in mystic delirium’: was this hermit mathematician a forgotten genius whose ideas could transform AI – or a lonely madman? | Mathematics | The Guardian</a></li>
+
+    <li><a href="https://www.noemamag.com/the-mythology-of-conscious-ai" target="_blank" rel="noopener">The Mythology Of Conscious AI</a></li>
+
+</ul>
+<p class="see-more"><a href="./posts/links.html">See all bookmarks →</a></p>
+
+            </section>
+            
+            <footer id="footer">
+                Built with 
+                <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            </footer>
+        </article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+        function stripHighlighting(pre) {
+            var code = pre.querySelector('code');
+            if (code) {
+                code.innerHTML = code.textContent;
+            }
+        }
+        function detectLanguage(pre, code) {
+            var classes = [];
+            if (pre && pre.classList) {
+                classes = classes.concat(Array.from(pre.classList));
+            }
+            if (code && code.classList) {
+                classes = classes.concat(Array.from(code.classList));
+            }
+            for (var i = 0; i < classes.length; i++) {
+                var cls = classes[i];
+                if (cls && cls !== 'sourceCode') {
+                    return cls.toLowerCase();
+                }
+            }
+            return null;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('pre').forEach(function(pre) {
+                stripHighlighting(pre);
+                var code = pre.querySelector('code');
+                var lang = detectLanguage(pre, code);
+                if (lang && code) {
+                    code.className = 'language-' + lang;
+                }
+                if (pre.classList.contains('sourceCode')) {
+                    pre.classList.remove('sourceCode');
+                }
+            });
+            if (window.Prism) {
+                if (Prism.plugins && Prism.plugins.autoloader) {
+                    Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
+                }
+                Prism.highlightAll();
+            }
+        });
+    </script>
+    </body>
+</html>
