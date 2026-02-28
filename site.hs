@@ -72,12 +72,6 @@ main = do
             route   idRoute
             compile compressCssCompiler
 
-        match "projects.md" $ do
-            route   $ setExtension "html"
-            compile $ pandocCompiler
-                >>= loadAndApplyTemplate "templates/default.html" defaultContext
-                >>= relativizeUrls
-
         match "posts/links.html" $ do
             route idRoute
             compile $ do
