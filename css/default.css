@@ -63,6 +63,11 @@ a:hover {
     margin: 0 auto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
 h1 {
     font-size: 1.5em;
     line-height: 1.3;
@@ -248,23 +253,66 @@ section {
 .post-list {
     list-style: none;
     padding-left: 0;
+    margin: 0;
 }
 
 .post-item {
-    margin-bottom: 5px;
+    margin-bottom: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #504945;
 }
 
-.post-meta {
-    margin-bottom: -5px;
+.post-item:last-child {
+    border-bottom: none;
 }
 
-.post-meta span {
+.post-entry {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.post-date {
+    flex: 0 0 130px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.post-date .post-meta {
     color: #928374;
     font-size: 14px;
 }
 
-.post-link {
+.post-title {
+    flex: 1;
+}
+
+.post-title a {
     color: #fabd2f;
+    font-weight: bold;
+}
+
+.post-title a:hover {
+    color: #fabd2f;
+    text-shadow: 0 0 6px #fabd2f;
+}
+
+.post-category,
+.post-readtime {
+    color: #928374;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+@media (max-width: 600px) {
+    .post-entry {
+        flex-direction: column;
+        gap: 2px;
+    }
+    .post-date {
+        flex: none;
+        text-align: left;
+    }
 }
 
 /* Search input styling */
