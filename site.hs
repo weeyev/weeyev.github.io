@@ -132,6 +132,11 @@ postCtx = mconcat
         case lookupString "category" metadata <|> lookupString "type" metadata of
             Just cat -> return cat
             Nothing -> empty
+    , field "tags" $ \item -> do
+        metadata <- getMetadata (itemIdentifier item)
+        case lookupString "tags" metadata of
+            Just t -> return t
+            Nothing -> empty
     , defaultContext
     ]
 

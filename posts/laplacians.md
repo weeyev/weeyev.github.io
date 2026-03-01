@@ -3,6 +3,7 @@ title: laplacians
 date: June 15, 2025
 description: developing feelings for laplacians
 readtime: 8 min read
+tags: ml, graphs, topology
 ---
 
 

@@ -2,6 +2,7 @@
 title: why you should try brainfuck
 date: 2025-06-07
 description: Exploring the joy and challenges of programming in Brainfuck, an esoteric programming language that makes you think differently about code.
+tags: programming, esolang
 ---
 
 ```brainfuck

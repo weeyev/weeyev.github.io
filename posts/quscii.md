@@ -1,6 +1,7 @@
 ---
 title: quscii
 date: 2025-04-20
+tags: quantum, project
 ---
 
 ![QuSCII Logo](/images/logo.webp)

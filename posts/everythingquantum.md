@@ -3,6 +3,7 @@ title: everything quantum
 date: April 19, 2025
 description: A brief overview for anyone who has just heard of quantum computing and can't figure out where to start.
 readtime: 6 min read
+tags: quantum, tutorial
 ---
 
 
