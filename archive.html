@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>[weeye] - Posts</title>
+        <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <article>
+<div id="header">
+    <a href="./" class="pfp-link"><img src="./images/final.png" alt="weeye" class="center" width="50%"></a>
+</div>
+
+            <section>
+                <h1>Posts</h1>
+                
+<p>A collection of my previous posts and writings, tagging will be added soon!</p>
+<ul class="post-list">
+    
+        <li class="post-item">
+            <div class="post-entry">
+                <div class="post-date">
+                    <span class="post-meta">September 7, 2025</span>
+                </div>
+                <div class="post-title">
+                    <a href="./posts/evaluators.html">evaluating your evaluators</a>
+                    <span class="post-tags"> · ml, agents, experiments</span>
+                    
+                    <span class="post-readtime"> · 12 min read</span>
+                </div>
+            </div>
+        </li>
+    
+        <li class="post-item">
+            <div class="post-entry">
+                <div class="post-date">
+                    <span class="post-meta">June 15, 2025</span>
+                </div>
+                <div class="post-title">
+                    <a href="./posts/laplacians.html">laplacians</a>
+                    <span class="post-tags"> · ml, graphs, topology</span>
+                    
+                    <span class="post-readtime"> · 8 min read</span>
+                </div>
+            </div>
+        </li>
+    
+        <li class="post-item">
+            <div class="post-entry">
+                <div class="post-date">
+                    <span class="post-meta">June 7, 2025</span>
+                </div>
+                <div class="post-title">
+                    <a href="./posts/brainfuck.html">why you should try brainfuck</a>
+                    <span class="post-tags"> · programming, esolang</span>
+                    
+                    
+                </div>
+            </div>
+        </li>
+    
+        <li class="post-item">
+            <div class="post-entry">
+                <div class="post-date">
+                    <span class="post-meta">April 20, 2025</span>
+                </div>
+                <div class="post-title">
+                    <a href="./posts/quscii.html">quscii</a>
+                    <span class="post-tags"> · quantum, project</span>
+                    
+                    
+                </div>
+            </div>
+        </li>
+    
+        <li class="post-item">
+            <div class="post-entry">
+                <div class="post-date">
+                    <span class="post-meta">April 19, 2025</span>
+                </div>
+                <div class="post-title">
+                    <a href="./posts/everythingquantum.html">everything quantum</a>
+                    <span class="post-tags"> · quantum, tutorial</span>
+                    
+                    <span class="post-readtime"> · 6 min read</span>
+                </div>
+            </div>
+        </li>
+    
+</ul>
+
+
+
+            </section>
+            
+            <footer id="footer">
+                Built with 
+                <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            </footer>
+        </article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+        function stripHighlighting(pre) {
+            var code = pre.querySelector('code');
+            if (code) {
+                code.innerHTML = code.textContent;
+            }
+        }
+        function detectLanguage(pre, code) {
+            var classes = [];
+            if (pre && pre.classList) {
+                classes = classes.concat(Array.from(pre.classList));
+            }
+            if (code && code.classList) {
+                classes = classes.concat(Array.from(code.classList));
+            }
+            for (var i = 0; i < classes.length; i++) {
+                var cls = classes[i];
+                if (cls && cls !== 'sourceCode') {
+                    return cls.toLowerCase();
+                }
+            }
+            return null;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('pre').forEach(function(pre) {
+                stripHighlighting(pre);
+                var code = pre.querySelector('code');
+                var lang = detectLanguage(pre, code);
+                if (lang && code) {
+                    code.className = 'language-' + lang;
+                }
+                if (pre.classList.contains('sourceCode')) {
+                    pre.classList.remove('sourceCode');
+                }
+            });
+            if (window.Prism) {
+                if (Prism.plugins && Prism.plugins.autoloader) {
+                    Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
+                }
+                Prism.highlightAll();
+            }
+        });
+    </script>
+    </body>
+</html>

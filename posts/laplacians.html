@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>[weeye] - laplacians</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <article>
+<div id="header">
+    <a href="../" class="pfp-link"><img src="../images/final.png" alt="weeye" class="center" width="50%"></a>
+</div>
+
+            <section>
+                <h1>laplacians</h1>
+                <div class="info">
+    Posted on June 15, 2025 • 8 min read
+</div>
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Incidence Matrix Example</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>[[<span class="op">-</span><span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a> [ <span class="fl">1.</span>  <span class="fl">0.</span> <span class="op">-</span><span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a> [ <span class="fl">0.</span>  <span class="fl">1.</span>  <span class="fl">1.</span>  <span class="fl">0.</span>  <span class="fl">0.</span> <span class="op">-</span><span class="fl">1.</span>  <span class="fl">0.</span>]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a> [ <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">1.</span>  <span class="fl">0.</span>  <span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a> [ <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">1.</span>  <span class="fl">0.</span>  <span class="fl">1.</span>]]</span></code></pre></div>
+<p>Before moving onto Laplacian and Laplacian matrices one cannot forget the origin - Incidence Matrices</p>
+<h2 id="understanding-incidence-matrices">Understanding Incidence Matrices</h2>
+<p>Incidence matrices are used to represent something that we as humans dont need to be explicitly stated about, but just like every other thing that we have to convert into a form that machines can understand (e.g., images into pixel values, graphs to adjacency matrices and so on), incidence matrices serve the same purpose of showing which node is connected to which other node via an edge or in which edge subset is that node present in.</p>
+<p>We make this matrix for all the nodes present in the simplicial structure, the point of this writing is to not only have a mathematical understanding of the same but at the same time develop some human emotions associated with it, for this let’s take a small example of a simplicial complex and its incidence matrix.</p>
+<p>Consider the simplicial complex S1:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Vertex <span class="bu">set</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Edge <span class="bu">set</span>: [[<span class="dv">1</span>,<span class="dv">2</span>], [<span class="dv">1</span>,<span class="dv">3</span>], [<span class="dv">2</span>,<span class="dv">3</span>], [<span class="dv">2</span>,<span class="dv">4</span>], [<span class="dv">3</span>,<span class="dv">4</span>], [<span class="dv">2</span>,<span class="dv">5</span>], [<span class="dv">4</span>,<span class="dv">5</span>]]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Face <span class="bu">set</span>: [[<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>], [<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>]]</span></code></pre></div>
+<p><img src="https://i.postimg.cc/X7rqLpBf/image.png" alt="Simplicial Complex S1" />
+<em>Visual representation of simplicial complex S1</em></p>
+<p>The incidence matrix of order 0 for this is:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[[<span class="op">-</span><span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> [ <span class="fl">1.</span>  <span class="fl">0.</span> <span class="op">-</span><span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a> [ <span class="fl">0.</span>  <span class="fl">1.</span>  <span class="fl">1.</span>  <span class="fl">0.</span>  <span class="fl">0.</span> <span class="op">-</span><span class="fl">1.</span>  <span class="fl">0.</span>]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a> [ <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">1.</span>  <span class="fl">0.</span>  <span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span>]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a> [ <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>  <span class="fl">1.</span>  <span class="fl">0.</span>  <span class="fl">1.</span>]]</span></code></pre></div>
+<p>What we see is that if the node is present in the edge subset we add a : +1 if the node is the head in the relationship (tail→head), otherwise a -1. If the node is not found in the subset, we put a zero.</p>
+<h2 id="moving-on-to-laplacian-matrices">Moving on to Laplacian Matrices</h2>
+<p><img src="https://i.postimg.cc/htY4P3Vz/image.png" alt="Laplacian Matrix Concept" />
+<em>what is it really though?</em></p>
+<blockquote>
+<p><strong>INTUITION:</strong> Imagine if you had a long lost brother and you wanted to find them. Possibly the best common thing that exists between you and them to facilitate this process is that you both have the same parents.</p>
+</blockquote>
+<p>In the same way, we can generalize different components of rank n in the structure on the basis of their common n+1 rank element. For example, in the edge subset {2,3} if we want to find what other edges are like it—i.e., share a same face or any other parent property—we use laplacians.</p>
+<p>A better way to imagine this is going through each rank laplacian and slowly building up the idea.</p>
+<p><img src="https://i.postimg.cc/Jh3Fdsrg/image.png" alt="Laplacian Rank Relationships" />
+<em>still don’t get it?</em></p>
+<h2 id="up-laplacians">Up Laplacians</h2>
+<h3 id="rank-0-up-laplacian-relation">Rank 0 Up Laplacian Relation</h3>
+<p>General Idea : If any 2 nodes have a shared edge between them.</p>
+<p>As a small excercise, take the node 1 in the above defined simplicial structure and look out for its incident edges. From there, find what other nodes are those edges incident to. In our case, the edges are [1,2] and [1,3] and the consequent nodes from them are {1},{2},{3} that share a common property of edges.</p>
+<p>Mathematically, this is done by either doing the matrix multiplication of the already found rank 0 incidence matrix with its transpose or doing the subtraction of adjacency matrix from the degree matrix.</p>
+<p><img src="https://i.postimg.cc/dQgz3Pfw/image.png" alt="Rank 0 Laplacian Calculation" />
+<em>finding the up laplacian</em></p>
+<p>L₀ =</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>[[ <span class="fl">2.</span> <span class="op">-</span><span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span>  <span class="fl">0.</span>  <span class="fl">0.</span>]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a> [<span class="op">-</span><span class="fl">1.</span>  <span class="fl">4.</span> <span class="op">-</span><span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span>]</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a> [<span class="op">-</span><span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span>  <span class="fl">3.</span> <span class="op">-</span><span class="fl">1.</span>  <span class="fl">0.</span>]</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a> [ <span class="fl">0.</span> <span class="op">-</span><span class="fl">1.</span> <span class="op">-</span><span class="fl">1.</span>  <span class="fl">3.</span> <span class="op">-</span><span class="fl">1.</span>]</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a> [ <span class="fl">0.</span> <span class="op">-</span><span class="fl">1.</span>  <span class="fl">0.</span> <span class="op">-</span><span class="fl">1.</span>  <span class="fl">2.</span>]]</span></code></pre></div>
+<p>Here, the diagonal elements have a weight due to them being the degree of that specific node. Another interesting property of this matrix is that the sum of each row is 0, leading to more useful things like graph clustering and partitioning.</p>
+<p>Also, laplacians are used in diffusion models for finding out what amount of values should be transmitted between neighborhood nodes. This wouldn’t work out if it didn’t sum up to zero (law of conservation required).</p>
+<h3 id="rank-1-up-laplacian-relation">Rank 1 Up Laplacian Relation</h3>
+<p>If any 2 shared edges have a shared face between them.</p>
+<p>Extending this concept over to an even higher rank: to get the edges that share a common face/form the sides of a triangle (a simple 2-d simplex).</p>
+<p>However, in a normal graph, the highest laplacian rank we can achieve is 2 as there are no other higher ranked simplexes existing in the structure.</p>
+<h2 id="down-laplacians">Down Laplacians</h2>
+<p><img src="https://i.postimg.cc/65LYXkJ8/image.png" alt="Down Laplacians" />
+<em>fidning down laplacians</em></p>
+<ul>
+<li><strong>Rank 1 down laplacians relation</strong> - if any 2 edges have a shared node</li>
+<li><strong>Rank 2 down laplacians relation</strong> - if any 2 faces have a shared edge</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[[ <span class="fl">3.</span> <span class="op">-</span><span class="fl">1.</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> [<span class="op">-</span><span class="fl">1.</span>  <span class="fl">3.</span>]]</span></code></pre></div>
+<p>Just like in up laplacians we had an upper bound condition of limiting to rank 2, similarly no rank 0 down laplacians can exist for the same reasons of no simplex of -1 rank being present in the structure.</p>
+<h2 id="hodge-laplacians">Hodge Laplacians</h2>
+<p>Add both the up and down laplacians and you get the hodge laplacian, thereby in a sense seeing the whole structure of graph in all the ways possible, but remember that with the exception of down in rank 0 and up in rank. The resulting laplacian matrix here is a diagonal matrix with the orientations cancelling each other out to produce zeros in the non diagonal elements.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>[[ <span class="fl">3.</span> <span class="op">-</span><span class="fl">1.</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> [<span class="op">-</span><span class="fl">1.</span>  <span class="fl">3.</span>]]</span></code></pre></div>
+<h2 id="how-multiplying-incident-matrices-gives-laplacian">How Multiplying Incident Matrices Gives Laplacian?</h2>
+<p>You might wonder how multiplying the matrix that captures whether an element exists in a subset with itself can lead to extracting relationship between elements using a higher dimension as base. For starters, there’s this amazing response that you can read on general laplacian operators.</p>
+<p><img src="https://i.postimg.cc/rwjpBXGF/image.png" alt="Matrix Multiplication to Laplacian" />
+<em>From incidence matrices to laplacians</em></p>
+<p>In graph laplacians at the same time when we multiply B·Bᵀ, the Bᵀ is doing the difference operation—i.e., finding the difference between the values at i and j → f[i] - f[j]—and then when it is multiplied with B, which penalizes/awards the deviation from the average by multiplying our terms with ±1.</p>
+<p>The laplacian operation on a function f at node i can be expressed as:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(Lf)[i] <span class="op">=</span> deg(i) · f[i] <span class="op">-</span> ∑_{j∼i} f[j]</span></code></pre></div>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://pyt-team.github.io/toponetx/notebooks/01_simplicial_complexes.html">visuals and content: TopoNetX documentation</a></li>
+<li><a href="https://www.reddit.com/r/math/comments/3yofdn/is_there_a_good_intuitive_explanation_of_the/">reddit post link</a></li>
+</ul>
+<p>Everything is taken without consent on the assumption that it is available in the public domain.</p>
+
+            </section>
+            
+            <footer id="footer">
+                Built with 
+                <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            </footer>
+        </article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+        function stripHighlighting(pre) {
+            var code = pre.querySelector('code');
+            if (code) {
+                code.innerHTML = code.textContent;
+            }
+        }
+        function detectLanguage(pre, code) {
+            var classes = [];
+            if (pre && pre.classList) {
+                classes = classes.concat(Array.from(pre.classList));
+            }
+            if (code && code.classList) {
+                classes = classes.concat(Array.from(code.classList));
+            }
+            for (var i = 0; i < classes.length; i++) {
+                var cls = classes[i];
+                if (cls && cls !== 'sourceCode') {
+                    return cls.toLowerCase();
+                }
+            }
+            return null;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('pre').forEach(function(pre) {
+                stripHighlighting(pre);
+                var code = pre.querySelector('code');
+                var lang = detectLanguage(pre, code);
+                if (lang && code) {
+                    code.className = 'language-' + lang;
+                }
+                if (pre.classList.contains('sourceCode')) {
+                    pre.classList.remove('sourceCode');
+                }
+            });
+            if (window.Prism) {
+                if (Prism.plugins && Prism.plugins.autoloader) {
+                    Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
+                }
+                Prism.highlightAll();
+            }
+        });
+    </script>
+    </body>
+</html>

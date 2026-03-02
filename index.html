@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>[weeye] - Home</title>
+        <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <article>
+<div id="header">
+    <a href="./" class="pfp-link"><img src="./images/final.png" alt="weeye" class="center" width="50%"></a>
+</div>
+
+            <section>
+                <h1>Home</h1>
+                <p>i'm a cs undergrad student, my work is mainly focused on machine learning with graphs and more specifically with topological deep learning, researching on stuff sometimes.</p>
+
+<p>feel free to have a talk anytime on <a href="https://x.com/weeyev" target="_blank">twitter</a> or mail me at theweeye at proton dot me</p>
+
+<h2>Links</h2>
+<ul>
+    <li><a href="./archive.html">posts</a></li>
+    <li><a href="./posts/links.html">bookmarks</a></li>
+</ul>
+
+<h2>Recent Posts</h2>
+<ul>
+
+    <li><a href="./posts/evaluators.html">evaluating your evaluators</a></li>
+
+    <li><a href="./posts/laplacians.html">laplacians</a></li>
+
+    <li><a href="./posts/brainfuck.html">why you should try brainfuck</a></li>
+
+    <li><a href="./posts/quscii.html">quscii</a></li>
+
+    <li><a href="./posts/everythingquantum.html">everything quantum</a></li>
+
+</ul>
+<p class="see-more"><a href="./archive.html">See all posts →</a></p>
+
+<h2>Recent Bookmarks</h2>
+<ul>
+
+    <li><a href="https://kempnerinstitute.harvard.edu/news/how-the-brain-and-ai-reuse-old-knowledge-in-new-situations" target="_blank" rel="noopener">How the Brain and AI Reuse Old Knowledge in New Situations - Kempner Institute</a></li>
+
+    <li><a href="https://dimitri.ml/posts/why-diffusion-language-models-are-the-future" target="_blank" rel="noopener">Why Diffusion Language Models Are the Future | Dimitri von Rütte</a></li>
+
+    <li><a href="https://hsph.harvard.edu/news/spiritual-practices-strongly-associated-with-reduced-risk-for-hazardous-alcohol-and-drug-use" target="_blank" rel="noopener">Spiritual practices strongly associated with reduced risk for hazardous alcohol and drug use</a></li>
+
+    <li><a href="https://gsas.harvard.edu/news/exploring-asymmetry-life" target="_blank" rel="noopener">Exploring the Asymmetry of Life </a></li>
+
+    <li><a href="https://kvfrans.com/deriving-the-kl" target="_blank" rel="noopener">Deriving the KL divergence loss in variational autoencoders</a></li>
+
+    <li><a href="https://paulgraham.com/taste.html" target="_blank" rel="noopener">Taste for Makers</a></li>
+
+    <li><a href="https://gwern.net/stress" target="_blank" rel="noopener">On Stress · Gwern.net</a></li>
+
+    <li><a href="https://path2phd.substack.com/p/p2p-no-20-the-gladius-of-comparison?s=r" target="_blank" rel="noopener">P2P No. 20 — The Gladius of Comparison</a></li>
+
+    <li><a href="https://path2phd.substack.com/p/the-relu-illusion-of-progress?s=r" target="_blank" rel="noopener">The ReLU illusion of progress - by Patrik Reizinger</a></li>
+
+    <li><a href="https://fermatslibrary.com/s/the-surprisingly-powerful-influence-of-drawing-on-memory" target="_blank" rel="noopener">The Surprisingly Powerful Influence of Drawing on Memory</a></li>
+
+</ul>
+<p class="see-more"><a href="./posts/links.html">See all bookmarks →</a></p>
+
+            </section>
+            
+            <footer id="footer">
+                Built with 
+                <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            </footer>
+        </article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+        function stripHighlighting(pre) {
+            var code = pre.querySelector('code');
+            if (code) {
+                code.innerHTML = code.textContent;
+            }
+        }
+        function detectLanguage(pre, code) {
+            var classes = [];
+            if (pre && pre.classList) {
+                classes = classes.concat(Array.from(pre.classList));
+            }
+            if (code && code.classList) {
+                classes = classes.concat(Array.from(code.classList));
+            }
+            for (var i = 0; i < classes.length; i++) {
+                var cls = classes[i];
+                if (cls && cls !== 'sourceCode') {
+                    return cls.toLowerCase();
+                }
+            }
+            return null;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('pre').forEach(function(pre) {
+                stripHighlighting(pre);
+                var code = pre.querySelector('code');
+                var lang = detectLanguage(pre, code);
+                if (lang && code) {
+                    code.className = 'language-' + lang;
+                }
+                if (pre.classList.contains('sourceCode')) {
+                    pre.classList.remove('sourceCode');
+                }
+            });
+            if (window.Prism) {
+                if (Prism.plugins && Prism.plugins.autoloader) {
+                    Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
+                }
+                Prism.highlightAll();
+            }
+        });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>[weeye] - Projects</title>
+        <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <article>
+<div id="header">
+    <a href="./" class="pfp-link"><img src="./images/final.png" alt="weeye" class="center" width="50%"></a>
+</div>
+
+            <section>
+                <h1>Projects</h1>
+                <div class="project-grid">
+<div class="project-card">
+<h3>
+simpljets
+</h3>
+<p>
+a simplicial convolutional nn for jet classification
+</p>
+</div>
+<div class="project-card">
+<h3>
+jetclass
+</h3>
+<p>
+a graph nn with multiple convolutional layers for jet classification
+</p>
+</div>
+<div class="project-card">
+<h3>
+autorl
+</h3>
+<p>
+evaluating llm as a judge for reasoning and coding tasks
+</p>
+</div>
+<div class="project-card">
+<h3>
+quscii
+</h3>
+<p>
+quantum inspired image to ascii convertor
+</p>
+</div>
+</div>
+            </section>
+            
+            <footer id="footer">
+                Built with 
+                <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            </footer>
+        </article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+        function stripHighlighting(pre) {
+            var code = pre.querySelector('code');
+            if (code) {
+                code.innerHTML = code.textContent;
+            }
+        }
+        function detectLanguage(pre, code) {
+            var classes = [];
+            if (pre && pre.classList) {
+                classes = classes.concat(Array.from(pre.classList));
+            }
+            if (code && code.classList) {
+                classes = classes.concat(Array.from(code.classList));
+            }
+            for (var i = 0; i < classes.length; i++) {
+                var cls = classes[i];
+                if (cls && cls !== 'sourceCode') {
+                    return cls.toLowerCase();
+                }
+            }
+            return null;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('pre').forEach(function(pre) {
+                stripHighlighting(pre);
+                var code = pre.querySelector('code');
+                var lang = detectLanguage(pre, code);
+                if (lang && code) {
+                    code.className = 'language-' + lang;
+                }
+                if (pre.classList.contains('sourceCode')) {
+                    pre.classList.remove('sourceCode');
+                }
+            });
+            if (window.Prism) {
+                if (Prism.plugins && Prism.plugins.autoloader) {
+                    Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
+                }
+                Prism.highlightAll();
+            }
+        });
+    </script>
+    </body>
+</html>

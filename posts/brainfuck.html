@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>[weeye] - why you should try brainfuck</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <article>
+<div id="header">
+    <a href="../" class="pfp-link"><img src="../images/final.png" alt="weeye" class="center" width="50%"></a>
+</div>
+
+            <section>
+                <h1>why you should try brainfuck</h1>
+                <div class="info">
+    Posted on June 7, 2025
+</div>
+
+<pre class="brainfuck"><code>&gt;+++++++++[&lt;++++++++&gt;-] &lt;. ---. +++++++.. +++.</code></pre>
+<h2 id="background">Background</h2>
+<p>I first came across Brainfuck last year by one of Nicuevo’s streams solving AOC 2024 day 7, wrote my first program and left it, until recently I got back and it felt like meeting your long lost brother (at least for a while). The whole purpose of writing this blog is to share that joy with anyone who reads this. It also serves as a reminder if you have already explored Brainfuck previously and left it on the way to make a debut back or an invitation for someone who hasn’t heard of it before to get their hands muddy.</p>
+<h2 id="why">Why</h2>
+<p>A bit of context first: Brainfuck is a low level esoteric Turing complete language built by Urban Mueller in 1993 while he was doing his undergrad in physics. What does it look like?</p>
+<pre class="brainfuck"><code>++++++++[&gt;++++[&gt;++&gt;+++&gt;+++&gt;+&lt;&lt;&lt;&lt;-]&gt;+&gt;+&gt;-]&gt;&gt;+[&lt;]&lt;-]&gt;&gt;.&gt;---.+++++++..+++.&gt;&gt;.&lt;-.&lt;.+++.------.--------.&gt;&gt;+.&gt;++.</code></pre>
+<p>Now the question is why? The real reason as quoted by Mueller was to implement a compiler—yes not the ones that you make as part of the C courses, (it was eventually 170 bytes in total), but for me the real reason is still <strong>TO HAVE FUN</strong>. Where is the fun in writing <code>useState</code> or <code>import torch</code>? We often don’t think and just blurt out the syntax with your keyboard, but Brainfuck makes you think—activate more neurons than usual.</p>
+<p>The next time you’re a bit bored: write hello world in Brainfuck, treat it as a brainteaser and try to effectively figure out 4 different ways of doing the same thing. I won’t give a tutorial on how to do that here (there are many already) but instead convince you in 4 points to do the same.</p>
+<ol type="1">
+<li><strong>It’s fun</strong> - it’s not about building something life impacting or useful (most of the times)</li>
+<li><strong>Use your brain</strong> - when you write something in a specific way and go to bed, you’re bound to think about the other n ways to do the same thing more efficiently. Over time I felt I did these while writing the first attempt.</li>
+<li><strong>Low level</strong> - take some break from your high level friend, go low level—back to the memory, it’s like a programming detox</li>
+<li><strong>Learn how to code</strong> - write good and structured code, something that is declining and would help in high level languages too</li>
+</ol>
+<blockquote>
+<p><strong>FAIR WARNING:</strong> Brainfuck has a threshold value that is different for everyone—don’t overdo it if you realize your capacity is less or it gets really boring pretty fast. Yes it’s also used professionally, one of the examples being—Brainfuck Enterprise Solutions, but it’s probably not for the “normal” to say. Personally I think this is useless and totally misses the point but I have huge respect for anyone who pulls it off.</p>
+</blockquote>
+<p>A few helpful links are dropped below and if you still aren’t convinced probably you are doing all of this for the wrong reasons.</p>
+<pre class="brainfuck"><code>+[-----&gt;+++&lt;]&gt;+.++++++++..-----------.-[---&gt;+&lt;]&gt;-.++[---&gt;++&lt;]&gt;.+++++++++.+[--&gt;+++&lt;]&gt;+.++++++++.</code></pre>
+<h2 id="helpful-links">Helpful Links:</h2>
+<ul>
+<li><a href="https://gist.github.com/roachhd/dce54bec8ba55fb17d3a">Brainfuck for dummies</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Brainfuck">Intro to Brainfuck</a></li>
+<li><a href="https://copy.sh/brainfuck/">Brainfuck interpreter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Brainfuck">Wiki</a></li>
+</ul>
+<h2 id="cool-links">Cool Links:</h2>
+<ul>
+<li><a href="#">Mueller’s talk on BF</a></li>
+<li><a href="#">Nicuveo’s AOC 2024 in BF</a></li>
+<li><a href="#">Brainfuck to Go compiler</a></li>
+<li><a href="#">Get good at Brainfuck (at your own risk)</a></li>
+<li><a href="#">BF tic tac toe</a></li>
+</ul>
+
+            </section>
+            
+            <footer id="footer">
+                Built with 
+                <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            </footer>
+        </article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+        function stripHighlighting(pre) {
+            var code = pre.querySelector('code');
+            if (code) {
+                code.innerHTML = code.textContent;
+            }
+        }
+        function detectLanguage(pre, code) {
+            var classes = [];
+            if (pre && pre.classList) {
+                classes = classes.concat(Array.from(pre.classList));
+            }
+            if (code && code.classList) {
+                classes = classes.concat(Array.from(code.classList));
+            }
+            for (var i = 0; i < classes.length; i++) {
+                var cls = classes[i];
+                if (cls && cls !== 'sourceCode') {
+                    return cls.toLowerCase();
+                }
+            }
+            return null;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('pre').forEach(function(pre) {
+                stripHighlighting(pre);
+                var code = pre.querySelector('code');
+                var lang = detectLanguage(pre, code);
+                if (lang && code) {
+                    code.className = 'language-' + lang;
+                }
+                if (pre.classList.contains('sourceCode')) {
+                    pre.classList.remove('sourceCode');
+                }
+            });
+            if (window.Prism) {
+                if (Prism.plugins && Prism.plugins.autoloader) {
+                    Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
+                }
+                Prism.highlightAll();
+            }
+        });
+    </script>
+    </body>
+</html>
