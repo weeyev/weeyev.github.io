@@ -4,6 +4,8 @@ import           Control.Applicative ((<|>), empty)
 import           Data.Aeson                 (FromJSON, parseJSON, withObject, (.:), (.:?), decode)
 import qualified Data.ByteString.Lazy.Char8 as BSL
 import           System.Process             (callCommand)
+import           System.Directory           (removeDirectoryRecursive)
+import           Control.Exception          (catch, SomeException)
 import           Data.List (isInfixOf)
 import           Data.Monoid (mappend)
 import           Hakyll
@@ -58,7 +60,8 @@ main = do
     callCommand "python3 scripts/update_bookmarks.py"
     bookmarks <- loadBookmarks
     
-    -- Force recompile check
+    catch (removeDirectoryRecursive "_cache") (\(_ :: SomeException) -> return ())
+    
     hakyllWith config $ do
         match "images/*" $ do
             route   idRoute
