@@ -1,5 +1,6 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE ScopedTypeVariables #-}
 import           Control.Applicative ((<|>), empty)
 import           Data.Aeson                 (FromJSON, parseJSON, withObject, (.:), (.:?), decode)
 import qualified Data.ByteString.Lazy.Char8 as BSL
