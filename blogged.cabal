@@ -22,7 +22,8 @@ executable blogged
                        hakyll,
                        aeson,
                        bytestring,
-                       process
+                       process,
+                       directory
   ghc-options:         -Wall
                        -Wcompat
                        -Widentities
