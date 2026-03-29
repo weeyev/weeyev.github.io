@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>[weeye] - Home</title>
+        <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <article>
+<div id="header">
+    <a href="./" class="pfp-link"><img src="./images/final.png" alt="weeye" class="center" width="50%"></a>
+</div>
+
+            <section>
+                <h1>Home</h1>
+                <p>i'm a cs undergrad student, my work is mainly focused on machine learning with graphs and more specifically with topological deep learning, researching on stuff sometimes.</p>
+
+<p>feel free to have a talk anytime on <a href="https://x.com/weeyev" target="_blank">twitter</a> or mail me at theweeye at proton dot me</p>
+
+<h2>Links</h2>
+<ul>
+    <li><a href="./archive.html">posts</a></li>
+    <li><a href="./posts/links.html">bookmarks</a></li>
+</ul>
+
+<h2>Recent Posts</h2>
+<ul>
+
+    <li><a href="./posts/evaluators.html">evaluating your evaluators</a></li>
+
+    <li><a href="./posts/laplacians.html">laplacians</a></li>
+
+    <li><a href="./posts/brainfuck.html">why you should try brainfuck</a></li>
+
+    <li><a href="./posts/quscii.html">quscii</a></li>
+
+    <li><a href="./posts/everythingquantum.html">everything quantum</a></li>
+
+</ul>
+<p class="see-more"><a href="./archive.html">See all posts →</a></p>
+
+<h2>Recent Bookmarks</h2>
+<ul>
+
+    <li><a href="https://justintchiu.com/blog/ift" target="_blank" rel="noopener">Differentiating through optimization with the IFT</a></li>
+
+    <li><a href="https://gram-competition.github.io" target="_blank" rel="noopener">GRaM Competition @ ICLR 2026 | Competition track of the GRaM workshop</a></li>
+
+    <li><a href="https://www.youtube.com/watch?v=Ex43Hh18JhQ" target="_blank" rel="noopener">Recursive Field Theory: An Attempt at a Metaphysical Systems Theory - YouTube</a></li>
+
+    <li><a href="https://www.youtube.com/watch?v=D_AQHSSljSs" target="_blank" rel="noopener">A generalization of Mirzakhani's identity, and geometric recursion - YouTube</a></li>
+
+    <li><a href="https://decentdescent.org/tp5.html" target="_blank" rel="noopener">Tuning GPT-3 on a Single GPU</a></li>
+
+    <li><a href="https://www.jakobfoerster.com/how-to-rebuttal-ml-paper" target="_blank" rel="noopener">Jakob N. Foerster - How To Rebuttal ML Paper</a></li>
+
+    <li><a href="https://www.youtube.com/watch?v=3NCbEbopMj8" target="_blank" rel="noopener">Computers, Geometry and Einstein - Jason Lotay - YouTube</a></li>
+
+    <li><a href="https://www.jstor.org/stable/184878?seq=1" target="_blank" rel="noopener">Behavior, Purpose and Teleology on JSTOR</a></li>
+
+    <li><a href="https://arxivblog.substack.com/p/mathematicians-say-ant-colony-problem?s=r" target="_blank" rel="noopener">Mathematicians say ant colony problem-solving is isomorphic to machine learning</a></li>
+
+    <li><a href="https://www.youtube.com/watch?v=LSHTkbnmzy4" target="_blank" rel="noopener">How Attention Residuals Rewire Modern LLMs - YouTube</a></li>
+
+</ul>
+<p class="see-more"><a href="./posts/links.html">See all bookmarks →</a></p>
+
+            </section>
+            
+            <footer id="footer">
+                Built with 
+                <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            </footer>
+        </article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+        function stripHighlighting(pre) {
+            var code = pre.querySelector('code');
+            if (code) {
+                code.innerHTML = code.textContent;
+            }
+        }
+        function detectLanguage(pre, code) {
+            var classes = [];
+            if (pre && pre.classList) {
+                classes = classes.concat(Array.from(pre.classList));
+            }
+            if (code && code.classList) {
+                classes = classes.concat(Array.from(code.classList));
+            }
+            for (var i = 0; i < classes.length; i++) {
+                var cls = classes[i];
+                if (cls && cls !== 'sourceCode') {
+                    return cls.toLowerCase();
+                }
+            }
+            return null;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('pre').forEach(function(pre) {
+                stripHighlighting(pre);
+                var code = pre.querySelector('code');
+                var lang = detectLanguage(pre, code);
+                if (lang && code) {
+                    code.className = 'language-' + lang;
+                }
+                if (pre.classList.contains('sourceCode')) {
+                    pre.classList.remove('sourceCode');
+                }
+            });
+            if (window.Prism) {
+                if (Prism.plugins && Prism.plugins.autoloader) {
+                    Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
+                }
+                Prism.highlightAll();
+            }
+        });
+    </script>
+    </body>
+</html>

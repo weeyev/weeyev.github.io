@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>[weeye] - quscii</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <article>
+<div id="header">
+    <a href="../" class="pfp-link"><img src="../images/final.png" alt="weeye" class="center" width="50%"></a>
+</div>
+
+            <section>
+                <h1>quscii</h1>
+                <div class="info">
+    Posted on April 20, 2025
+</div>
+
+<figure>
+<img src="../images/logo.webp" alt="QuSCII Logo" />
+<figcaption aria-hidden="true">QuSCII Logo</figcaption>
+</figure>
+<p>First things first, check out the project: <a href="#">here</a></p>
+<p>This blog is an explanation/guide to the same, I will not spend a lot of time on the truistic parts of qubits, and quantum computing. However, if this is your first time hearing those terms, it is probably a good idea watch the great video by 3b1b <a href="#">here</a> or if you’re feeling too adventurous you can refer to something that I wrote while explaining myself (it might not be that accurate though and if you have some more time refer to the 3b1b video).</p>
+<p>Just as fun facts, I will mention some differences in the classical approaches vs. the quantum approach here:</p>
+<ul>
+<li>The usual ascii generators map the pixel values directly from the 1-d space, giving the same output for each pixel every time, while when the characters are mapped here from the Hilbert Space of dimensions 2^n -&gt; n = number of qubits, on every run, they are different, giving it a unique form.</li>
+<li>The complexity of classical versions is O(n), whereas for the quantum ones, it is O(2^n), for this project, we will be working only with 2 qubits, making it feasible for outputs.</li>
+<li>The randomness effect scales drastically after the threshold value of around 0.4, a comparison to realise this is below, also a graph visualisation would have been better but I couldn’t find a good way to do that.</li>
+</ul>
+<figure>
+<img src="../images/img1.webp" alt="Randomness Effect Comparison" />
+<figcaption aria-hidden="true">Randomness Effect Comparison</figcaption>
+</figure>
+<p>Alright, that’s a lot of throat clearing for a while, let’s jump into the implementation.</p>
+<p>The whole project is essentially using 3 major libraries: qiskit-&gt; for everything quantum, pillow -&gt; for everything image related and FastAPI-&gt; for the hosting.</p>
+<blockquote>
+<p><strong>DISCLAIMER</strong>
+1) The site might take some time to get working- bear with me on this.
+2) The regular computation time takes ~ 2-3 minutes, so have some patience, if it still does not work, try with a different image or dm me on x dot com
+3) This is a fun project and by no standards is for production, be ready to get some bugs along the way.</p>
+</blockquote>
+<h2 id="architecture">Architecture</h2>
+<p>The architecture mainly comprises of 3 subparts: Input Processing, Encoding, and Transformation Block.</p>
+<figure>
+<img src="../images/img2.webp" alt="Architecture Diagram" />
+<figcaption aria-hidden="true">Architecture Diagram</figcaption>
+</figure>
+<p>Let’s look at each part separately now and try to give a code demo for the same.</p>
+<h2 id="input-processing">Input Processing</h2>
+<p>The different features like height, width, r, g, b values are extracted from the input image after we resize it for generality across all inputs. For all practical purposes, instead of processing the image pixel by pixel, we instead split it in into rows and columns of block sizes which helps in faster processing of images by reducing the dimensions of the input image.</p>
+<p>Let’s consider an example image of dimensions 16x16 pixels, and we define the block size as 4, making the total number of blocks in the image 16, with each block having the dimension of 4x4. Now, instead of iterating over each pixel in the image, we will be iterating over these blocks, thus significantly improving the computation time and maintaining consistency in the output.</p>
+<figure>
+<img src="../images/img3.webp" alt="Block Processing Example" />
+<figcaption aria-hidden="true">Block Processing Example</figcaption>
+</figure>
+<p>This is a standard process, and it helps us in our approach as instead of making 256 total different circuits every time, we can make do with only 16, hence making the whole process faster by a factor of (block_size)^2.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading the images</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>brightness_cache <span class="op">=</span> {}</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    input_image <span class="op">=</span> Image.<span class="bu">open</span>(inp_path)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">FileNotFoundError</span>:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Image not found.&quot;</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>input_width, input_height <span class="op">=</span> input_image.size</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> input_height <span class="op">//</span> block_size</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>cols <span class="op">=</span> input_width <span class="op">//</span> block_size</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>resized <span class="op">=</span> input_image.resize((cols, rows), Image.Resampling.LANCZOS)</span></code></pre></div>
+<h2 id="encoding">Encoding</h2>
+<p>After the necessary classical information about the r, g, b values are fetched, we now convert and merge them into a single brightness value referred to as perceived brightness- done to increase perception for human eyes as it’s a common fact that eyes are more sensitive to colors in the order green&gt;red&gt;blue. I came across this article a while back on the same topic and found it pretty interesting. This also helps in smooth mapping of characters and ensuring that there aren’t any variations in the outputs- all the pixels of brightness, suppose 150, should only be mapped to a specific character like “/”. The formula for perceived brightness is:</p>
+<p><em>B_perceived = 0.2126⋅R + 0.7152⋅G + 0.0722⋅B</em></p>
+<p>The encoding is done by defining a quantum circuit of 2 qubits and mapping the brightness values linearly into rotation angles of the state vector. The range of values (0,255) is mapped to (0 to π/2), with 0 representing black and 255 being white.</p>
+<figure>
+<img src="../images/img4.webp" alt="Quantum Circuit Encoding" />
+<figcaption aria-hidden="true">Quantum Circuit Encoding</figcaption>
+</figure>
+<p>The conversion is executed by using the rotation along the y-axis gate on both qubits 0 and 1. The value of rotation is calculated in radians by:</p>
+<p><em>θ = (val / 255) ⋅ π/2</em></p>
+<p>Now we are ready to manipulate these state vectors and rotate them to induce quantumness.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># getting the data pixel wise</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(rows):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> y <span class="kw">in</span> <span class="bu">range</span>(cols):</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        r, g, b <span class="op">=</span> resized.convert(<span class="st">&quot;RGB&quot;</span>).getpixel((y, x))</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        bright <span class="op">=</span> <span class="bu">int</span>(<span class="fl">0.2126</span> <span class="op">*</span> r <span class="op">+</span> <span class="fl">0.7152</span> <span class="op">*</span> g <span class="op">+</span> <span class="fl">0.0722</span> <span class="op">*</span> b)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># encoding into quantum states</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>num_qubits <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>qc <span class="op">=</span> QuantumCircuit(num_qubits, num_qubits)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> (val <span class="op">/</span> <span class="fl">255.0</span>) <span class="op">*</span> (pi <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>qc.ry(theta, <span class="dv">0</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>qc.ry(theta, <span class="dv">1</span>)</span></code></pre></div>
+<h2 id="transformation">Transformation</h2>
+<p>The quantum effect is controlled by the magnitude; at zero it’s your normal ascii generator, subtle effects start showing after ~0.3-0.4. At any value greater than 0, we first put the qubits in superposition with the hadamard gate and eventually use the controlled rotation gate for changing the values of theta in each pixel. For nuanced effects, the angle limit that we assume is π/4 instead of π/2. This is simulated for a single shot right now, as the execution time increases rapidly with the usual 1024 shots (~1024 times increase).</p>
+<p>After conversion, we get the counts for each state -&gt; convert them to integers from binary and normalize them to values between 0-255, giving us the processed brightness. To preserve the originalness of the image while adding these quantum effects, LERP - Linear Interpolation is used, it smoothly blends both the values with a weighted average on the basis of magnitude value while processing. The difference between using LERP and normal averaging lies in the flexibility that LERP inherently has, unlike hard-setting a value, it dynamically varies based on the magnitudes. This is how it looks in our use case:</p>
+<p><em>blended = ⌊val⋅(1−magnitude) + qbright⋅magnitude⌋</em></p>
+<p>The mapping is performed on the blended brightness by fetching the specific characters for each processed pixel block from the character set.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check for quantumness control</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> magnitude <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    qc.h(<span class="dv">0</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    qc.cry((val <span class="op">/</span> <span class="fl">255.0</span>) <span class="op">*</span> (pi <span class="op">/</span> <span class="dv">4</span>), <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    qc.measure(<span class="bu">range</span>(num_qubits), <span class="bu">range</span>(num_qubits))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    simulator <span class="op">=</span> Aer.get_backend(<span class="st">'qasm_simulator'</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    final <span class="op">=</span> transpile(qc, simulator)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> simulator.run(final, shots<span class="op">=</span><span class="dv">1</span>).result()</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    counts <span class="op">=</span> result.get_counts(qc)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> counts:</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        key <span class="op">=</span> <span class="bu">list</span>(counts.keys())[<span class="dv">0</span>]</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        qval <span class="op">=</span> <span class="bu">int</span>(key, <span class="dv">2</span>) <span class="op">/</span> (<span class="dv">2</span><span class="op">**</span>num_qubits <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        qbright <span class="op">=</span> qval <span class="op">*</span> <span class="dv">255</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        blended <span class="op">=</span> <span class="bu">int</span>(val <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> magnitude) <span class="op">+</span> qbright <span class="op">*</span> magnitude)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        brightness_cache[val] <span class="op">=</span> blended</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>r_new <span class="op">=</span> get_brightness(r)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>g_new <span class="op">=</span> get_brightness(g)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>b_new <span class="op">=</span> get_brightness(b)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>fill <span class="op">=</span> (r_new, g_new, b_new)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>ascii_index <span class="op">=</span> <span class="bu">min</span>(<span class="bu">int</span>((bright <span class="op">/</span> <span class="dv">255</span>) <span class="op">*</span> (<span class="bu">len</span>(ascii_set) <span class="op">-</span> <span class="dv">1</span>)), <span class="bu">len</span>(ascii_set) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>char <span class="op">=</span> ascii_set[ascii_index]</span></code></pre></div>
+<h2 id="output">Output</h2>
+<p>The output canvas is initialized with the dimensions as number_charecters x charecter_dim, we select the character height and width according to the input dimensions of the font.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># redrawing back to canvas</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>font <span class="op">=</span> ImageFont.load_default()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>bbox <span class="op">=</span> font.getbbox(<span class="st">&quot;A&quot;</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>char_width <span class="op">=</span> bbox[<span class="dv">2</span>] <span class="op">-</span> bbox[<span class="dv">0</span>]</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>char_height <span class="op">=</span> bbox[<span class="dv">3</span>] <span class="op">-</span> bbox[<span class="dv">1</span>]</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>output_width <span class="op">=</span> cols <span class="op">*</span> char_width</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>output_height <span class="op">=</span> rows <span class="op">*</span> char_height</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> Image.new(<span class="st">&quot;RGB&quot;</span>, (output_width, output_height), <span class="st">&quot;black&quot;</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>draw <span class="op">=</span> ImageDraw.Draw(output)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>draw.text((y <span class="op">*</span> char_width, x <span class="op">*</span> char_height), char, font<span class="op">=</span>font, fill<span class="op">=</span>fill)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> output.convert(<span class="st">'RGB'</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>output.save(out_path)</span></code></pre></div>
+<p><img src="../images/img5.webp" alt="Sample Output - Microsoft Explorer Logo" />
+<em>A sample output of microsoft explorer logo</em></p>
+<h2 id="deployment">Deployment</h2>
+<p>I hate this part, it’s just so much intensive. FastAPI is the go to for deploying any python project, but the real problems came with it, scaling it for multiple users as render kept blocking concurrent requests. Initially I got into redis but had some issues, and then down the line decided to settle with the inbuilt backgroundtasks- it works fine enough and I have no intentions of investing more time into scaling something which is a fun proejct at the end of the day.</p>
+<p>I had a lot of fun making this, learnt a lot about both the things -the ones that I thought I knew about and those that I didn’t, whenever I get back to this, would love to do this with videos though the feasibility is still questionable.</p>
+<p>Thank you for reading this and for any feedback - dm or mail me</p>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="#">Converting an Image to ASCII with Python</a></li>
+<li><a href="#">yeaag- <span class="citation" data-cites="ronin">@ronin</span> for the idea</a></li>
+</ul>
+
+            </section>
+            
+            <footer id="footer">
+                Built with 
+                <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            </footer>
+        </article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+        function stripHighlighting(pre) {
+            var code = pre.querySelector('code');
+            if (code) {
+                code.innerHTML = code.textContent;
+            }
+        }
+        function detectLanguage(pre, code) {
+            var classes = [];
+            if (pre && pre.classList) {
+                classes = classes.concat(Array.from(pre.classList));
+            }
+            if (code && code.classList) {
+                classes = classes.concat(Array.from(code.classList));
+            }
+            for (var i = 0; i < classes.length; i++) {
+                var cls = classes[i];
+                if (cls && cls !== 'sourceCode') {
+                    return cls.toLowerCase();
+                }
+            }
+            return null;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('pre').forEach(function(pre) {
+                stripHighlighting(pre);
+                var code = pre.querySelector('code');
+                var lang = detectLanguage(pre, code);
+                if (lang && code) {
+                    code.className = 'language-' + lang;
+                }
+                if (pre.classList.contains('sourceCode')) {
+                    pre.classList.remove('sourceCode');
+                }
+            });
+            if (window.Prism) {
+                if (Prism.plugins && Prism.plugins.autoloader) {
+                    Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
+                }
+                Prism.highlightAll();
+            }
+        });
+    </script>
+    </body>
+</html>
