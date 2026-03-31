@@ -1,6 +1,6 @@
 ---
 title: gemini 3.0 is gone 
-date: March 31, 2025
+date: March 31, 2026
 description: future of depracation of models
 readtime: 4 min 
 tags: random, musings 

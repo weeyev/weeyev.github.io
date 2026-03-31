@@ -7,7 +7,8 @@ import qualified Data.ByteString.Lazy.Char8 as BSL
 import           System.Process             (callCommand)
 import           System.Directory           (removeDirectoryRecursive)
 import           Control.Exception          (catch, SomeException)
-import           Data.List (isInfixOf)
+import           Data.List (isInfixOf, sortBy)
+import           Data.Ord (comparing)
 import           Data.Monoid (mappend)
 import           Hakyll
 
@@ -56,10 +57,14 @@ loadBookmarks = do
         Just b -> return b
         Nothing -> return []
 
+sortBookmarks :: [Bookmark] -> [Bookmark]
+sortBookmarks = sortBy (flip $ comparing bookmarkDate)
+
 main :: IO ()
 main = do
     callCommand "python3 scripts/update_bookmarks.py"
     bookmarks <- loadBookmarks
+    let sortedBookmarks = sortBookmarks bookmarks
     
     catch (removeDirectoryRecursive "_cache") (\(_ :: SomeException) -> return ())
     
@@ -79,8 +84,8 @@ main = do
         match "posts/links.html" $ do
             route idRoute
             compile $ do
-                let ctx = listField "bookmarks" bookmarkCtx (mapM makeItem bookmarks) `mappend`
-                          constField "bookmarkCount" (show $ length bookmarks) `mappend`
+                let ctx = listField "bookmarks" bookmarkCtx (mapM makeItem sortedBookmarks) `mappend`
+                          constField "bookmarkCount" (show $ length sortedBookmarks) `mappend`
                           constField "title" "Bookmarks" `mappend`
                           defaultContext
                 getResourceBody
@@ -115,7 +120,7 @@ main = do
                 posts <- recentFirst =<< loadAll (fromGlob "posts/*.md")
                 let indexCtx =
                         listField "posts" postCtx (return $ take 10 posts) `mappend`
-                        listField "homeBookmarks" bookmarkCtx (mapM makeItem $ take 10 bookmarks) `mappend`
+                        listField "homeBookmarks" bookmarkCtx (mapM makeItem $ take 10 sortedBookmarks) `mappend`
                         constField "title" "Home"                `mappend`
                         defaultContext
 
