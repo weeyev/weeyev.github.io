@@ -90,7 +90,7 @@
 <p>You might wonder how multiplying the matrix that captures whether an element exists in a subset with itself can lead to extracting relationship between elements using a higher dimension as base. For starters, there’s this amazing response that you can read on general laplacian operators.</p>
 <p><img src="https://i.postimg.cc/rwjpBXGF/image.png" alt="Matrix Multiplication to Laplacian" />
 <em>From incidence matrices to laplacians</em></p>
-<p>In graph laplacians at the same time when we multiply B·Bᵀ, the Bᵀ is doing the difference operation—i.e., finding the difference between the values at i and j → f[i] - f[j]—and then when it is multiplied with B, which penalizes/awards the deviation from the average by multiplying our terms with ±1.</p>
+<p>In graph laplacians at the same time when we multiply B·Bᵀ, the Bᵀ is doing the difference operation i.e., finding the difference between the values at i and j → f[i] - f[j]—and then when it is multiplied with B, which penalizes/awards the deviation from the average by multiplying our terms with ±1.</p>
 <p>The laplacian operation on a function f at node i can be expressed as:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(Lf)[i] <span class="op">=</span> deg(i) · f[i] <span class="op">-</span> ∑_{j∼i} f[j]</span></code></pre></div>
 <h2 id="links">Links</h2>
@@ -103,7 +103,7 @@
             </section>
             
             <footer id="footer">
-                Built with 
+                Built with
                 <a href="http://jaspervdj.be/hakyll">Hakyll</a>
             </footer>
         </article>

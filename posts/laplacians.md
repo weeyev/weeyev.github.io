@@ -1,7 +1,7 @@
 ---
 title: laplacians 
 date: June 15, 2025
-description: developing feelings for laplacians
+description: what is the laplacian operator? 
 readtime: 8 min read
 tags: ml, graphs, topology
 ---
@@ -127,7 +127,7 @@ You might wonder how multiplying the matrix that captures whether an element exi
 ![Matrix Multiplication to Laplacian](https://i.postimg.cc/rwjpBXGF/image.png)
 *From incidence matrices to laplacians*
 
-In graph laplacians at the same time when we multiply B·Bᵀ, the Bᵀ is doing the difference operation—i.e., finding the difference between the values at i and j → f[i] - f[j]—and then when it is multiplied with B, which penalizes/awards the deviation from the average by multiplying our terms with ±1.
+In graph laplacians at the same time when we multiply B·Bᵀ, the Bᵀ is doing the difference operation i.e., finding the difference between the values at i and j → f[i] - f[j]—and then when it is multiplied with B, which penalizes/awards the deviation from the average by multiplying our terms with ±1.
 
 The laplacian operation on a function f at node i can be expressed as:
 

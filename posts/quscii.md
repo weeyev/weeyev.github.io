@@ -156,11 +156,10 @@ output.save(out_path)
 
 ## Deployment
 
-I hate this part, it's just so much intensive. FastAPI is the go to for deploying any python project, but the real problems came with it, scaling it for multiple users as render kept blocking concurrent requests. Initially I got into redis but had some issues, and then down the line decided to settle with the inbuilt backgroundtasks- it works fine enough and I have no intentions of investing more time into scaling something which is a fun proejct at the end of the day.
+I hate this part, it is just annoyingly shitty and adds no value whatsoever. FastAPI has been the go to for deploying any python project, but the stupid problem that comes with it is scaling it for multiple users as render kept blocking concurrent requests. Initially I got into redis but had some issues, and then down the line decided to settle with the inbuilt background tasks, it works fine enough and I have no intentions of investing more time into scaling something which is a fun proejct at the end of the day.
 
-I had a lot of fun making this, learnt a lot about both the things -the ones that I thought I knew about and those that I didn't, whenever I get back to this, would love to do this with videos though the feasibility is still questionable.
+I had a lot of fun making this, learnt a lot about both the things -the ones that I thought I knew about and those that I didn't, whenever I get back to this, would love to do this with videos. 
 
-Thank you for reading this and for any feedback - dm or mail me
 
 ### References
 

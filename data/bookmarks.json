@@ -1,5 +1,71 @@
 [
   {
+    "title": "Rabbit Holes: Manhattan Project",
+    "url": "https://piyushastrocat.substack.com/p/rabbit-holes-manhattan-project?s=r",
+    "date": "March 29, 2026",
+    "domain": "",
+    "snippet": "what happened at los alamos.",
+    "full_snippet": "what happened at los alamos.",
+    "to_read": false,
+    "signal_color": "#ef4444",
+    "has_snippet": true
+  },
+  {
+    "title": "Differentiating through optimization with the IFT",
+    "url": "https://justintchiu.com/blog/ift",
+    "date": "March 28, 2026",
+    "domain": "",
+    "snippet": "Differentiating through optimization",
+    "full_snippet": "Differentiating through optimization",
+    "to_read": false,
+    "signal_color": "#ef4444",
+    "has_snippet": true
+  },
+  {
+    "title": "GRaM Competition @ ICLR 2026 | Competition track of the GRaM workshop",
+    "url": "https://gram-competition.github.io",
+    "date": "March 28, 2026",
+    "domain": "",
+    "snippet": "Competition track of the GRaM workshop",
+    "full_snippet": "Competition track of the GRaM workshop",
+    "to_read": false,
+    "signal_color": "#ef4444",
+    "has_snippet": true
+  },
+  {
+    "title": "Recursive Field Theory: An Attempt at a Metaphysical Systems Theory - YouTube",
+    "url": "https://www.youtube.com/watch?v=Ex43Hh18JhQ",
+    "date": "March 28, 2026",
+    "domain": "",
+    "snippet": "This talk explores the foundations of AI and consciousness, challenging the traditional agent-environment paradigm. Bennett proposes \"stack theory,\" a novel framework based on abstraction layers,...",
+    "full_snippet": "This talk explores the foundations of AI and consciousness, challenging the traditional agent-environment paradigm. Bennett proposes \"stack theory,\" a novel framework based on abstraction layers, examining implications for intelligence and subjective experience. The lecture delves into experiments and philosophical discussions about building conscious machines. This video demonstrates the substitution method for solving recurrence relations, a technique useful when the master theorem is inapplicable. The presenter explains the method's advantages and disadvantages, then walks through a step-by-step example problem, calculating iterations and substituting to find the time complexity. ",
+    "to_read": false,
+    "signal_color": "#ef4444",
+    "has_snippet": true
+  },
+  {
+    "title": "A generalization of Mirzakhani's identity, and geometric recursion - YouTube",
+    "url": "https://www.youtube.com/watch?v=D_AQHSSljSs",
+    "date": "March 28, 2026",
+    "domain": "",
+    "snippet": "Follow along using the transcript. Follow along using the transcript.",
+    "full_snippet": "Follow along using the transcript. Follow along using the transcript.",
+    "to_read": false,
+    "signal_color": "#ef4444",
+    "has_snippet": true
+  },
+  {
+    "title": "Tuning GPT-3 on a Single GPU",
+    "url": "https://decentdescent.org/tp5.html",
+    "date": "March 28, 2026",
+    "domain": "",
+    "snippet": "Cross-posted from Microsoft Research Blog",
+    "full_snippet": "Cross-posted from Microsoft Research Blog",
+    "to_read": false,
+    "signal_color": "#ef4444",
+    "has_snippet": true
+  },
+  {
     "title": "Jakob N. Foerster - How To Rebuttal ML Paper",
     "url": "https://www.jakobfoerster.com/how-to-rebuttal-ml-paper",
     "date": "March 27, 2026",
