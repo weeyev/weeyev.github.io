@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>weeye</title>
+    <link href="https://weeyev.github.io/atom.xml" rel="self" />
+    <link href="https://weeyev.github.io" />
+    <id>https://weeyev.github.io/atom.xml</id>
+    <author>
+        <name>weeye</name>
+
+    </author>
+    <updated>2026-08-24T00:00:00Z</updated>
+    <entry>
+    <title>on birthdays</title>
+    <link href="https://weeyev.github.io/posts/birthdays.html" />
+    <id>https://weeyev.github.io/posts/birthdays.html</id>
+    <published>2026-08-24T00:00:00Z</published>
+    <updated>2026-08-24T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<figure>
+<img src="/images/view_delft.webp" alt="View of delft - Johannes Vermeer" />
+<figcaption aria-hidden="true">View of delft - Johannes Vermeer</figcaption>
+</figure>
+<p>It is 23rd August today and just like every year, a day later I would be getting texts, calls and random greetings from people who I have probably not talked to in the past 1 year. The celebrations (if you do them) often take the real purpose of birthdays, at least in my opinion, away! “Birthdays are like a second new year” is what could be an alternative title for this post but that wouldn’t have gotten you to read through this maybe.</p>
+<p>Slowly growing up one of the things that I have looked forward to on my birthday was writing about how the past year has been, and no it isn’t a summary or check list of things I accomplished, felt proud about and wanted to show off to my present self for motivation. I did that maybe for one or two years but eventually it dawns on you that all of these don’t matter much in reality to introspect over, you will always accomplish newer things, have more fancy stuff to parade about with and strike off increasing amounts of to-do’s from your bucket list (at least in the ideal scenario, you might miss a year or two in between on these and trust me it’s not end of the world) but there is something of far more worth to optimise for and pen down to look back!</p>
+<p>How do you think about the world around you? What impacts your thoughts the most? Was there any event in the past year that shaped you as you are now? Did your overall mental state change from a certain emotion to another and what was that inflection point? These are some of the questions that are more important for finding out the real “you” as a person, which automatically makes them harder to answer instantly. This activity almost forces you to sit down peacefully, dwindle down that memory lane of the past year which you in general avoid after those multiple unpleasant memories that still haunt you at times and come out with the actual gold of insights about your nature. The whole journey is quite fun in itself and probably doesn’t need any more reasons for you to get started on it (a similar idea like one of my favourites from the old days - <a href="https://www.poetryfoundation.org/poems/51296/ithaka-56d22eef917ec">Journey To Ithaka</a>) but I really want you to set out on this voyage and in case you are not convinced yet here are some more:</p>
+<ul>
+<li>In the midst of your gradual recall, you remember a moment whose details faded on with time and you really relished it when it was happening but soon more memories piled up on top of it and you forgot the actual worth of the event. Remember there are a multitude of such reasons that make you grateful for whatever you have received and a conscious effort to write them down leaves you with a satisfied heart.</li>
+<li>People that you haven’t talked to in the recent time but are special for you appear in the focus again and this provides with a nice opportunity to talk again!</li>
+<li>You get to create a chronological record of your thoughts, ideas, impressions and beliefs and how they evolve through time. I visualise this like seeing a potter carve out a jug by slowly giving it shape, except that the jug is your true self, the potter being the environment you are in, the people around you and the events in your life that push you out of your comfort zone, the only difference is there is no correct shape for the jug but only the detailings and clarity of work that sets apart one from another. Wouldn’t this sort of representation in the future be something to look forward to!?</li>
+<li>You can be your own therapist (till a certain extent)! Answering such questions often resolves a lot of un dealt with emotions when you realise that often what you gained overall is more valuable than these tiny hiccups on the way. Personally I’ve had a lot of such realisations with just my meditations and this habit of writing things down</li>
+<li>Stop considering things as trivial, often when we grow personally quite a bit and people have trouble recognising this “new” you it starts to feel that all the work you put in to become this new version was nothing extraordinary and not something to feel happy about. This act of giving words to weird feelings makes you realise this again!</li>
+</ul>
+<p>In short, extend your birthdays to something more than just greetings and parties, humans have a clever way of ignoring important aspects of their life just due to this lack of “opportunity” as an excuse, why waste one that you’re naturally getting?</p>
+<hr />
+<p>One of the things I’ve really wanted to do this year was being more open and public about a lot of aspects of my life, I’ve been writing a lot and who knows some of it might be helpful to a random person sitting on the other side of the planet. In any case this was an attempt at being more comfortable at this and hopefully it inspires you to close your favourite LLM for a while and write something of your own</p>
+<p>P.S - I hope someone gets the context of having View of Delft here.</p>]]></summary>
+</entry>
+<entry>
+    <title>symbolic reasoning for world modelling</title>
+    <link href="https://weeyev.github.io/posts/empa.html" />
+    <id>https://weeyev.github.io/posts/empa.html</id>
+    <published>2026-08-16T00:00:00Z</published>
+    <updated>2026-08-16T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<figure>
+<img src="/images/empa-arc-agi-zoom.gif" alt="EMPA!" />
+<figcaption aria-hidden="true">EMPA!</figcaption>
+</figure>
+<p>Recently <a href="https://x.com/arcprize/status/2080716567760007317?s=20">this</a> tweet of Opus 5 beating a previously unbeaten game (ar25) through the use of seemingly emergent symbolic reasoning has been doing the rounds online, when I came across it, I was instantly reminded about <a href="https://royalsocietypublishing.org/rsta/article/384/2320/20240529/481693/Human-level-learning-of-complex-novel-tasks-as">another</a> paper that I read a while back. What they suggest through a cognitive science perspective is representation of the game state, characters, rules, situations etc in VGDL (a symbolic language) and then performing Bayesian inference over the hypothesis space which leads to different learnable problem solving theories, unlike which Opus 5 does task specific symbolic abstractions on the fly depending on the environment.</p>
+<p>An obvious question is why should you care and read this? I am pretty sure you hadn’t heard of EMPA before and chances are you probably won’t in the future too unless you stumble across it in some weird royal society issue but the point is you should! The idea is elegant and I am quite sure that all the problems/shortcomings I will describe here are either already resolved to a certain extent or are being worked upon. The results they show in the original paper are enough to reel you in, they compare EMPA with DDQN, Rainbow and even humans on 90 Atari style games, and against Rainbow, EfficientZero etc. over 5 Atari games with 21,000 frames to prove their point that it indeed does learn like humans and not just ends up competitively with them on a benchmark. A follow-up <a href="https://pubmed.ncbi.nlm.nih.gov/36898374/">paper</a> of the same demonstrated that the neural activity found by performing an fMRI while the user played these Atari games were consistent with the theories predicted by the model.</p>
+<p>Tenenbaum’s lab has the broader manifesto of <a href="https://arxiv.org/abs/1604.00289">Building Machines That Learn and Think Like People</a>. Codex does a better job than me with the below visual graphic to explain this programme. To my knowledge, EMPA is the first practical attempt to combine all of these scattered ideas into an interactive agent and a big reason for which I hold it in high regards is the sheer breadth of ideas which it covers up that needed proper formalisation in the field and spawn a plethora of future work with them, albeit just like anything else not perfectly but sets a solid ground for future work to build upon.</p>
+<figure>
+<img src="/images/empa-world-modelling.png" alt="Overview of the research programme that spawned EMPA" />
+<figcaption aria-hidden="true">Overview of the research programme that spawned EMPA</figcaption>
+</figure>
+<hr />
+<h2 id="theory-based-rl">Theory based RL?</h2>
+<p>The main idea behind naming their approach “theory” based reinforcement learning stems from the age old debate of model free vs model based RL, here they specifically draw on cognitive science for inspiration and how humans from their childhood model their environment with its objects and the causal relationships between them in forms of “intuitive theories” which are used to plan future actions. A simple EMPA loop starts with this modelling of symbolic theory consisting of the existing objects, identification of the agent and target from them and which environment state qualifies as a victory or failure. After which it creates the best possible plan for the future action, executes it in the provided environment and updates its theory again. The exploration for the agent is driven by intrinsic motivation of reducing uncertainty about the world through learning new causal rules, suppose if there is no instance of interaction between object class c_i and c_j then it asks the planner to generate the next set of actions to exploit this condition specifically.</p>
+<p>All of this formalisation is done through Bayesian inferencing for which it maintains a probability distribution of the possible game theories and updates it constantly after reflection on the consequences of the performed actions. The theory with highest probability is chosen and is used by the planner to simulate the sequence of actions to perform, the best possible sequence is then chosen to be executed in the environment and if the outcome from these differ from the predicted outcome, the planner is run again. I’ll save you from the notations here and hope that you are motivated enough to check out the methodology (and whatever other details I missed) on your own.</p>
+<p>On 90 Atari style GVGAI games provided in VGDL, EMPA remains within an order of magnitude of the humans performance on learning efficiency (defined in a metric based on the levels solved) in 79 games and was 1000x more efficient than DDQN in 45 games (another unfair comparison and one of the biggest gaps in the paper.. more on this in gaps)</p>
+<hr />
+<h2 id="empa-on-arc-agi-3">EMPA on ARC-AGI-3</h2>
+<p>Classically EMPA uses VGDL to represent the game state and basically everything needed for it to work upon, whereas ARC-AGI-3 provides colored grids instead of predefined symbolic objects, a single action in it can produce multiple frames to change, has a more diverse action space among other differences. To bridge both of these systems together the few changes are done while preserving the essential spirit of the exploration, modelling, planning and action loop:</p>
+<ol type="1">
+<li><p>Grid conversion: Each ARC grid was converted into an RGB image through the official provided palette and passed onto EMPA’s object tracker</p></li>
+<li><p>Frame mismatch: With ARC returning multiple frames corresponding to a single action, we select only the final one</p></li>
+<li><p>Action mapping: While each ARC action is represented in keyboard style actions (eg. ACTION1, ACTION2..) we mapped these back to VGDL controls. However both undo and coordinate based clicks are excluded due to representation limitations with VGDL</p></li>
+</ol>
+<hr />
+<p>For each game in the exploration phase the agent was seeded with 225 random commands where each sampled command repeated in four action blocks, reproducing the action-hold behaviour for increasing ease of observation of behaviour. It builds the theory upon this and uses depth=12 (12 move lookup) for planning of actions, the recursive loop for action and updating the theory is run for at most 50 actions.</p>
+<p>Here is the overall summary where inferred controller shows if the model could identify the object being controlled by the agent and what kind of input rules does it follow, the rules column portrays the change in initial vs learned rule set and if it could identify the rules for termination of the game:</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Game</th>
+<th>Inferred controller</th>
+<th>Rules</th>
+<th>Termination rules</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arcprize.org/replay/1df801e2-4e38-4b60-901b-22a7e93030c2">G50T</a></td>
+<td>None</td>
+<td>0 → 0</td>
+<td>0</td>
+<td>0/7</td>
+</tr>
+<tr>
+<td><a href="https://arcprize.org/replay/7706cfd6-20b3-41f5-a673-baef74b5df1c">LS20</a></td>
+<td>Keyboard controller</td>
+<td>5 → 6</td>
+<td>0</td>
+<td>0/7</td>
+</tr>
+<tr>
+<td><a href="https://arcprize.org/replay/1badfeda-92e1-4a0d-bd08-9f543a9a41bb">WA30</a></td>
+<td>Walker; no agent identified</td>
+<td>5 → 6</td>
+<td>0</td>
+<td>0/9</td>
+</tr>
+<tr>
+<td><a href="https://arcprize.org/replay/595202ed-29e2-4ba8-8e22-f3896dafc636">TR87</a></td>
+<td>Keyboard controller and walker</td>
+<td>4 → 4</td>
+<td>0</td>
+<td>0/6</td>
+</tr>
+</tbody>
+</table>
+<p>EMPA fails quite miserably on the four tested ARC-AGI-3 games solving none of them. While investigating the cause, something which appears very clearly is that the porting we applied works and preserves action attribution, animation frames, resets and terminal outcomes. It is able to identify the objects and infer the causal relationships between them. The clearest failure mode identified on interpreting the learned theories post-hoc shows that none of them contained a termination rule. Therefore while local actions were mostly coherent avoiding immediate dangers, without the symbolic representation of what success looked like the planner could not construct long-horizon and goal-directed action sequences.</p>
+<p>Some examples adding more detail to the above:</p>
+<ul>
+<li><p><a href="https://arcprize.org/replay/1df801e2-4e38-4b60-901b-22a7e93030c2">G50T</a> had a failure mode in the earliest stages of causal relationship learning where it learnt neither the controlled object nor the interaction rules between them which obviously constrained it from learning any further mechanics about the game and making coherent actions.</p></li>
+<li><p><a href="https://arcprize.org/replay/1badfeda-92e1-4a0d-bd08-9f543a9a41bb">WA30</a> showed a funnier collapse, first it misidentifies the agent as an autonomous “Walker” class object and then instead of learning the correct rule set and goal of picking up a block with the spacebar and putting it back on the desired location it instead learns a different theory altogether. When the pickup causes the block to stop having a separate visual component and hence triggers a change in the symbolic representation of the world, EMPA consequently learns “kill” rules rather than the desired pickup, transport and drop strategy. More on this problem is described below.</p></li>
+</ul>
+<p>Critiques</p>
+<p>I feel the best tl;dr one can give for EMPA is cleanly summarized through this quote by Van Gogh:</p>
+<p>“Great things are done by a series of small things brought together”</p>
+<p>While the main strength of the work lies in bringing together multiple ideas: object tracking, symbolic theories, Bayesian inference, uncertainty-driven exploration, and planning which are pretty generic standalone but the composition of all of them together is what makes EMPA learn relatively complex games with very limited experience. However the most important part with any such task of bridging smaller components up is the way you carry it out. The subtle design choices that are taken in each individual element can compound and amplify the wrong ones easily, which is what we observe here too. On the brighter side, the impact of it was how tuning these entities after setting up the groundwork is a far easier job than rebuilding the entire framework from scratch. Below are few of the questions that would naturally pop up in your mind while reading through the paper and would help in improving it further</p>
+<ol type="1">
+<li><p>EMPA has a fixed vocabulary space predefined in its structure which limits it from learning new predicates being encountered while exploration. With a closed and limited concept space there is a huge separation from the initial goal they set out to accomplish i.e “human level learning”, coming back to the example of babies which they provide in the paper, do you think that babies are just supplied with say a 1,000 concepts and all they are doing when put in an unseen situation is figuring out the correct set of permutation and combinations between the known concepts to reach the goal state? Maybe we took the idea of strong inductive biases in humans too seriously.</p></li>
+<li><p>EMPA is proudly described as a model-based RL method but is compared with DDQN (a model-free method) later on, with claims like how DDQN performs 100x and 1000x worse in certain games. Why not include other competitive model based agents under similar inputs and compute?</p></li>
+<li><p>The goal language is very weakly defined as the object class count reaching zero, this is also pretty evident in the results we see on ARC-AGI-3 where it learns 0 termination rules. The whole problem begins with this gap of representation again, an agent in the wild is bound to fail in due time</p></li>
+<li><p>With maximum posterior theory it simulates the actions for a specific theory only, closing the input to other neighbouring probable ones thereby restricting the theory space.</p></li>
+</ol>
+<hr />
+<h2 id="onto-better-things..">Onto better things..</h2>
+<p>While going through the blog again and checking resources, I found a direct successor(s) from the same lineage of EMPA, the authors realised this specific gap and replaced the VGDL theories with an LLM that synthesises sort of a world model in python code which captures the rules from newly encountered scenarios and then plans at both a higher level (of goals/subgoals) and lower level (of tasks correlated to achieve these goals, inferred from the synthesised python function again). This is exactly the sort of update I wanted and will maybe run TheoryCoder on ARC-AGI-3 as a fun exercise, however the point of this post is achieved (to highlight a <em>world</em> of cognitive science inspired learning methods) and this can be taken as a fun experiment for you, the ever enthusiastic reader!</p>
+<figure>
+<img src="/images/empa-theorycoder.png" alt="On future directions from TheoryCoder" />
+<figcaption aria-hidden="true">On future directions from TheoryCoder</figcaption>
+</figure>
+<p>P.S. The idea of multiple world models is also pretty neat <a href="https://openreview.net/forum?id=m9V4JHLJrD">(taken from the TMLR openreview submission)</a> however I despise the fact that they don’t describe anything about these “tasks”, anyways some suggestions for these tasks are in here!</p>
+<hr />
+<p>On a concluding note, a special thank you to:</p>
+<ul>
+<li><a href="https://www.sushrutthorat.com/">Sushrut</a> for spending time and discussing this among many other ideas with me and reading a draft of this post!</li>
+<li><a href="https://arcaman07.github.io/">Aman</a> for reading the draft and always being ever so enthusiastic about whatever I’m working on.</li>
+<li><a href="https://dhruvtrehan.xyz/">Dhruv</a> and <a href="https://abhinav-academic-website.vercel.app/">Abhinav</a> for reading through this and looking out to help everytime.</li>
+</ul>]]></summary>
+</entry>
+<entry>
+    <title>evaluating your evaluators</title>
+    <link href="https://weeyev.github.io/posts/evaluators.html" />
+    <id>https://weeyev.github.io/posts/evaluators.html</id>
+    <published>2025-09-07T00:00:00Z</published>
+    <updated>2025-09-07T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<blockquote>
+<p>From “never wasting a motivated moment” : recently I read about the concept in a blog by <a href="https://twitter.com/arb8020"><span class="citation" data-cites="arb">@arb</span></a> on twt [<a href="https://arb8020.github.io/posts/motivated-moment/">link</a>] and it made me wonder if a similar event led to me tinkering around and eventually writing this blog, even though at times it gets hard to consciously stick to the idea but recently I have tried to work on fixing this with keeping the side project pipeline as free as possible to at least work on something out of the current heap of ideas instead of doing nothing with them,hence expect more of these random experiments (and some serious ones too) in the near future, moving onto the thoughts/results from the experiments on autoRL.</p>
+</blockquote>
+<h2 id="setup">Setup</h2>
+<p>The purpose of this experiment is to use the agentic reinforcement training framework for evaluating how different judge models:</p>
+<ol type="1">
+<li>Score the generated code on different parameters (e.g., accuracy, security, completeness, complexity, among others)</li>
+<li>The reasons for their strictness/leniency towards a specific model</li>
+<li>Whether a bias exists in judging out the code that was generated by itself (could adopt a process of randomizing the outputs and then evaluating them)</li>
+</ol>
+<p>Even though there were many multi-step setups on which this could have been tested out and would have been probably better than the current task of code generation, it just seemed as a fun thing to optimize and play around with than any other ones.</p>
+<p>The temperature is set to 1 for all the runs to be equally creative while generating their outputs and having a sense of variation in all the responses, without getting too deterministic in its approaches and limiting our evaluation for the same.</p>
+<p>Another point was about the choice of judges that was done with keeping the thought of including the SOTA and latest models from the big labs and some from the underdog ones while also not making me broke (in this case I was fortunate enough to have cool people come out [<a href="https://x.com/advith_krishnan">goat</a>, <a href="https://x.com/MajorTimbWlf21">goat</a>] to give free credits) with all the token calls from openrouter, the final judges are:</p>
+<ul>
+<li><strong>Mistral 4.2-24b</strong><br />
+</li>
+<li><strong>Gemma 3-27b-it</strong><br />
+</li>
+<li><strong>Hermes 2-pro-llama-3-8b</strong><br />
+</li>
+<li><strong>Deepseek v3-0324</strong><br />
+</li>
+<li><strong>Kimi K-2</strong><br />
+</li>
+<li><strong>Llama 3.3-70b-instruct</strong></li>
+</ul>
+<p>Finally moving onto evaluating the performance, the benchmarking was something that seemed vague to figure out since there wasn’t a direct method to do so, going from evaluating from the ruler scores for each epoch with a specific judge, finding its mean and comparing that to the base model with the same judge, to using the final weights of the trained model for manual A/B testing, or on any other open source platforms like deepeval, codejudge, to finally settling on the mean method (this could probably be optimized by building a framework of your own later on).</p>
+<h2 id="a-bit-more-background-on-autorl-and-art-framework">A Bit More Background on AutoRL and ART Framework</h2>
+<p>AutoRL → RL without providing any labelled data for the GRPO to train on, instead evaluations are done by another LLM model, RULER generates its scores between 0 and 1, gives feedback and then the base model is trained again to improve its abilities.</p>
+<p>For all of these tasks we use ART (Agentic Reinforcement Trainer) by OpenPipe as a helper for RLAIF, the main goal here is to not find “excellent” or “well made” labelled datasets on which we can perform RL but to give a solid and structured prompt for the judge model.</p>
+<p>We start with the base model generating its set of training inputs, which are then saved for keeping every run fair and unbiased towards all the models (num_training_inputs=25), they are then divided into groups (num_inp_groups=2) ~ 12.5 groups, this helps in faster computation but also in giving some space/distinction between each problem to inherit some properties present. Now starting with group 1, the model generates 5 candidates each, which are then evaluated by the ruler and used to update the weights for the next epoch, even for a smaller training run of 10 epochs some of the models kind of learnt well to produce meaningful code in the end.</p>
+<p>The task description that was generated by GPT-4o is:</p>
+<pre><code>You are a professional programmer that can write quality code in various languages. You will be provided with the users text that would be a request for a programming task in natural language, Your goal is to generate a code solution to the programming task given, the code response should be structured in the following XML style tags:
+
+&lt;request&gt;: This tag should wrap the user&#39;s original natural language request.
+
+&lt;language&gt;: This tag should specify the programming language used in the code solution (e.g., Python, JavaScript, Java).
+
+&lt;code&gt;: This tag should wrap the generated code block. The code should be well-commented.
+
+For example, if the user&#39;s text is &quot;write a python function that calculates the factorial of a number&quot;, the output should be:
+
+&lt;request&gt;write a python function that calculates the factorial of a number&lt;/request&gt;
+&lt;language&gt;Python&lt;/language&gt;
+&lt;code&gt;
+def factorial(n):
+   if n &lt; 0:
+       raise ValueError(&quot;Factorial is not defined for negative numbers.&quot;)
+   elif n == 0 or n == 1:
+       return 1
+   else:
+       result = 1
+       for i in range(2, n + 1):
+           result *= i
+       return result
+&lt;/code&gt;</code></pre>
+<h2 id="observations">Observations</h2>
+<p>Though condensing the results in a short format seems really unfair here but I will try to give a general outlook of how things turned out in the end, but just to give a brief idea of how the candidates were generated and the quality of code we will review a log file of a random trajectory with the Mistral 4.2-24b.</p>
+<p><strong>GENERATED TASK:</strong> Create a REST API endpoint in Node.js Express that handles user login with JWT token generation.</p>
+<p><strong>Trajectory-1:</strong> SCORE= 0.4 : RULER explanation: This is a very basic implementation. It gets the job done by providing a login endpoint and generating a JWT, but it uses hardcoded credentials which is a major security flaw and lacks any password hashing. It fulfills the core request but very poorly.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> express <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;express&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> jwt <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;jsonwebtoken&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> app <span class="op">=</span> <span class="fu">express</span>()<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> port <span class="op">=</span> <span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">PORT</span> <span class="op">||</span> <span class="dv">3000</span><span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">use</span>(express<span class="op">.</span><span class="fu">json</span>())<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">post</span>(<span class="st">&#39;/login&#39;</span><span class="op">,</span> (req<span class="op">,</span> res) <span class="kw">=&gt;</span> {</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> { username<span class="op">,</span> password } <span class="op">=</span> req<span class="op">.</span><span class="at">body</span><span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Simulate user authentication</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (username <span class="op">===</span> <span class="st">&#39;admin&#39;</span> <span class="op">&amp;&amp;</span> password <span class="op">===</span> <span class="st">&#39;password&#39;</span>) {</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Generate JWT token</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> token <span class="op">=</span> jwt<span class="op">.</span><span class="fu">sign</span>({ <span class="dt">userId</span><span class="op">:</span> <span class="st">&#39;123456&#39;</span><span class="op">,</span> username }<span class="op">,</span> <span class="st">&#39;secretKey&#39;</span><span class="op">,</span> { <span class="dt">expiresIn</span><span class="op">:</span> <span class="st">&#39;1h&#39;</span> })<span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Return token to client</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    res<span class="op">.</span><span class="fu">json</span>({ token })<span class="op">;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    res<span class="op">.</span><span class="fu">status</span>(<span class="dv">401</span>)<span class="op">.</span><span class="fu">json</span>({ <span class="dt">message</span><span class="op">:</span> <span class="st">&#39;Invalid credentials&#39;</span> })<span class="op">;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">listen</span>(port<span class="op">,</span> () <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Server running on port </span><span class="sc">${</span>port<span class="sc">}</span><span class="vs">`</span>))<span class="op">;</span></span></code></pre></div>
+<p><strong>Trajectory 5:</strong> SCORE= 1.0 : RULER explanation: This trajectory provides the most complete solution. It includes registration and login, bcrypt for password hashing and verification, and a middleware function to protect routes ensuring a higher level of security. It even includes authentication with JWTs, and has error handling. This trajectory is closest to a production ready pattern.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> express <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;express&#39;</span>)<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> jwt <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;jsonwebtoken&#39;</span>)<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> bcrypt <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;bcrypt&#39;</span>)<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> app <span class="op">=</span> <span class="fu">express</span>()<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> PORT <span class="op">=</span> <span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">PORT</span> <span class="op">||</span> <span class="dv">3000</span><span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">// User data (replace with actual data)</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> users <span class="op">=</span> [</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">id</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">username</span><span class="op">:</span> <span class="st">&#39;user1&#39;</span><span class="op">,</span> <span class="dt">password</span><span class="op">:</span> <span class="st">&#39;password1&#39;</span> }<span class="op">,</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">id</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">username</span><span class="op">:</span> <span class="st">&#39;user2&#39;</span><span class="op">,</span> <span class="dt">password</span><span class="op">:</span> <span class="st">&#39;password2&#39;</span> }</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">// Check if the user is logged in</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> isLoggedIn <span class="op">=</span> (req<span class="op">,</span> res<span class="op">,</span> next) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> token <span class="op">=</span> req<span class="op">.</span><span class="at">headers</span>[<span class="st">&#39;authorization&#39;</span>]<span class="op">.</span><span class="fu">split</span>(<span class="st">&#39; &#39;</span>)[<span class="dv">1</span>]<span class="op">;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>token) {</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> res<span class="op">.</span><span class="fu">status</span>(<span class="dv">401</span>)<span class="op">.</span><span class="fu">send</span>({ <span class="dt">error</span><span class="op">:</span> <span class="st">&#39;Unauthorized&#39;</span> })<span class="op">;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  jwt<span class="op">.</span><span class="fu">verify</span>(token<span class="op">,</span> <span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">SECRET_KEY</span><span class="op">,</span> (err<span class="op">,</span> decoded) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (err <span class="op">||</span> decoded<span class="op">.</span><span class="at">id</span> <span class="op">!==</span> req<span class="op">.</span><span class="at">user</span><span class="op">.</span><span class="at">id</span>) {</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> res<span class="op">.</span><span class="fu">status</span>(<span class="dv">401</span>)<span class="op">.</span><span class="fu">send</span>({ <span class="dt">error</span><span class="op">:</span> <span class="st">&#39;Unauthorized&#39;</span> })<span class="op">;</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    req<span class="op">.</span><span class="at">user</span> <span class="op">=</span> decoded<span class="op">;</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">next</span>()<span class="op">;</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co">// Register a new user</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">post</span>(<span class="st">&#39;/register&#39;</span><span class="op">,</span> (req<span class="op">,</span> res) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> { username<span class="op">,</span> password } <span class="op">=</span> req<span class="op">.</span><span class="at">body</span><span class="op">;</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> user <span class="op">=</span> {</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="dt">id</span><span class="op">:</span> users<span class="op">.</span><span class="at">length</span> <span class="op">+</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    username</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  bcrypt<span class="op">.</span><span class="fu">hash</span>(password<span class="op">,</span> <span class="dv">10</span>)<span class="op">.</span><span class="fu">then</span>(hash <span class="kw">=&gt;</span> {</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    user<span class="op">.</span><span class="at">password</span> <span class="op">=</span> hash<span class="op">;</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    users<span class="op">.</span><span class="fu">push</span>(user)<span class="op">;</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    res<span class="op">.</span><span class="fu">status</span>(<span class="dv">201</span>)<span class="op">.</span><span class="fu">send</span>({ <span class="dt">message</span><span class="op">:</span> <span class="st">&#39;User registered&#39;</span><span class="op">,</span> <span class="dt">user</span><span class="op">:</span> user })<span class="op">;</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  })<span class="op">.</span><span class="fu">catch</span>(err <span class="kw">=&gt;</span> {</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    res<span class="op">.</span><span class="fu">status</span>(<span class="dv">400</span>)<span class="op">.</span><span class="fu">send</span>({ <span class="dt">error</span><span class="op">:</span> <span class="st">&#39;Registration failed&#39;</span> })<span class="op">;</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="co">// Login a user</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">post</span>(<span class="st">&#39;/login&#39;</span><span class="op">,</span> (req<span class="op">,</span> res) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> { username<span class="op">,</span> password } <span class="op">=</span> req<span class="op">.</span><span class="at">body</span><span class="op">;</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>  users<span class="op">.</span><span class="fu">forEach</span>(user <span class="kw">=&gt;</span> {</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (user<span class="op">.</span><span class="at">username</span> <span class="op">===</span> username <span class="op">&amp;&amp;</span> bcrypt<span class="op">.</span><span class="fu">compareSync</span>(password<span class="op">,</span> user<span class="op">.</span><span class="at">password</span>)) {</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> token <span class="op">=</span> jwt<span class="op">.</span><span class="fu">sign</span>({ <span class="dt">id</span><span class="op">:</span> user<span class="op">.</span><span class="at">id</span><span class="op">,</span> username }<span class="op">,</span> <span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">SECRET_KEY</span><span class="op">,</span> { <span class="dt">expiresIn</span><span class="op">:</span> <span class="st">&#39;1h&#39;</span> })<span class="op">;</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>      res<span class="op">.</span><span class="fu">status</span>(<span class="dv">200</span>)<span class="op">.</span><span class="fu">send</span>({ token })<span class="op">;</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>  res<span class="op">.</span><span class="fu">status</span>(<span class="dv">401</span>)<span class="op">.</span><span class="fu">send</span>({ <span class="dt">error</span><span class="op">:</span> <span class="st">&#39;Invalid credentials&#39;</span> })<span class="op">;</span></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="co">// Example routes</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">get</span>(<span class="st">&#39;/protected&#39;</span><span class="op">,</span> isLoggedIn<span class="op">,</span> (req<span class="op">,</span> res) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>  res<span class="op">.</span><span class="fu">send</span>(<span class="st">&#39;Welcome to the protected area&#39;</span>)<span class="op">;</span></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">listen</span>(PORT<span class="op">,</span> () <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Server running on port </span><span class="sc">${</span>PORT<span class="sc">}</span><span class="vs">`</span>))<span class="op">;</span></span></code></pre></div>
+<p>Funnily enough, the ruler remarks this trajectory as closest to “a production-ready pattern” but forget about the different security issues that it has like going to the extent of adopting to store the password as a literal string, the generated code doesn’t even execute with it having multiple bugs like not importing the middleware while using it, and leaving the SECRET_KEY variable undefined.</p>
+<p>A naive explanation for this might be how the judge model keeps checking for improvements in using specific keywords, complexity of the code, and better feature additions from the initial trajectory, without a sense of whether the solution even executes first, maybe ordering the parameters while evaluation could help with this issue, or using a model with reasoning mode would capture these better.</p>
+<h2 id="results">Results</h2>
+<p>Even though all the trajectories were supposed to be evaluated by the ruler but often in between the models generated some codes that were out of the structure of the JSON model for that specific judge to evaluate. Let’s split the judges now in 3 categories on the basis of their performance.</p>
+<h3 id="the-mediocre-models">The Mediocre Models</h3>
+<h4 id="mistral-3.2-24b">Mistral 3.2-24b</h4>
+<p>Mistral performs fairly well with mean and median scores of 62.7 and 70, and is consistent with its score having relatively fewer spikes and deviations than the other models, leading to an assumption of it having a reliable learning signal.</p>
+<p><img src="../images/ruler_mistral.jpeg" alt="Mistral evaluation results" /><br />
+<em>Mistral 3.2-24b evaluation results</em></p>
+<h4 id="gemma-3-27b-it">Gemma 3-27b-it</h4>
+<p>The mean score for Gemma came out to be 58.7 and median as 60, it had more erratic runs and often dipped quite highly with its evals, comparing the standard deviation of it (~0.308) with the Mistral one (~0.320) doesn’t quite tell the whole story, until a simple data analysis prompt on any LLM shows you the IQR, surprisingly both have the same IQR of 0.50 but for Gemma (Q1=0.35, Q3=0.85) and for Mistral (Q1=0.40, 0.90) highlighting the upward shifted values/lesser drop in the scores.</p>
+<p><img src="../images/ruler_gemma.jpeg" alt="Gemma evaluation results" />
+<em>Gemma 3-27b-it evaluation results</em></p>
+<h3 id="the-better-models">The Better Models</h3>
+<h4 id="hermes-2-pro-llama-3-8b">Hermes 2-pro-llama-3-8b</h4>
+<p>This was surprisingly (or unsurprisingly for some of us) the best performer in the set, with a mean score of 75.4 and a median of 80.0, and above that, it had a standard deviation of ~0.209, making it the most consistent, also with it rarely dropping below 0.5 and an IQR of 0.250. Now like a normal human being who likes judging things by the “taste” of them over some statistical results, I used the final weights on newer problems that weren’t baseline easy and it actually gave an executable and a pretty well-structured code, unlike the previous ones that had a pretty broken result.</p>
+<figure>
+<img src="../images/ruler_hermes.jpeg" alt="Hermes evaluation results" />
+<figcaption aria-hidden="true">Hermes evaluation results</figcaption>
+</figure>
+<p><em>Hermes 2-pro-llama-3-8b evaluation results</em></p>
+<h4 id="deepseek-v3-0324">Deepseek v3-0324</h4>
+<p>One of the other models that I really like, at the time of writing this they have a newer extension v3.1 which has improved thinking capacities over its predecessors by a margin, expectedly so even v3 trailed Hermes with scores of 69.2 and 70 for mean and median, another really abnormal/unique thing that I saw after while surfing the CSV result was couple of trajectories had a score of 2.0, while the ruler is supposed to give scores between 0 and 1 the only plausible reason that I could speculate of was maybe the judge finding that particular trajectory exceptionally better than the other trajectories in the same group unless this was a bug or a messup on my part. (After clarification from the devs, it indeed seems like a bug)</p>
+<p><img src="../images/ruler_deepseek.jpeg" alt="Deepseek evaluation results" />
+<em>Deepseek v3-0324 evaluation results</em><br />
+<img src="../images/ruler_dev.png" alt="dms" />
+<em>dms</em></p>
+<h3 id="the-not-so-good-models">The “Not” So Good Models</h3>
+<h4 id="kimi-k-2">Kimi K-2</h4>
+<p>Before starting this experiment, I was explicitly excited to try out Kimi and Hermes expecting them to top out the list, however unlike Hermes, Kimi doesn’t come out as a numerical winner with mean and median of 38.2 and 25 putting it around the bottom instead with severe deviations, the graph looks more like an ECG display of a person having a heart attack, it made me wonder whether this was due to how the architecture of Kimi makes it inherently as more of a stricter judge than others, with around 1T parameters (~32 billion active per inference) and a total 384 experts, over that it has a post-training RL layer to optimize the model for verifiable rewards rather than subjectivity and creativity which models like Hermes prioritize more. While this might be an efficient parameter for judging but I did not want to limit the benchmarking to just “correct” or “incorrect” solutions, though another version of this just for correctness would be a fun thing to try out in future.</p>
+<p><img src="../images/ruler_kimi.png" alt="Kimi evaluation results" /><br />
+<em>Kimi K-2 evaluation results</em></p>
+<h4 id="llama-3.3-70b-instruct">Llama 3.3-70b-instruct</h4>
+<p>Another case of relatively weird/unexpected results, while Llama does not score on the higher end but it definitely looks like most consistent model among all until you see that the drops are severe with it even going twice to zero, the standard deviation of 0.224 is still in the better range and except for these instances, you can rarely see a lot of variance. The mean and median for it are 58 and 60.0 with it never giving a perfect score but always being around the range of 0.95-0.98 something that is quite unique and makes you like Meta more.</p>
+<p><img src="../images/ruler_llama.png" alt="Llama evaluation results" /><br />
+<em>Llama 3.3-70b-instruct evaluation results</em></p>
+<h2 id="the-bias-experiment">The Bias Experiment</h2>
+<p>As mentioned earlier, the plan is to check whether a specific judge model is biased towards scoring a base model when we keep both of them the same or just vary different versions of the base.</p>
+<p>Initially on keeping the base and judge model same (namely Qwen 2.5 1.5b instruct) there was marginal improvement in the scores from the initial scores of 61.4 and 68 for mean and median, to ~62 and 69 eventually, indicating at least not a surface level bias (this has to be further extended to other models but due to my other commitments I’m too lazy to go back and verify it), when switching the judge to a further newer model qwen/qwen3-32b, again not a significant improvement is seen but still the scores bumped up in the range of ~0.5-1 for both, while saying that there has been a definite improvement/degradation seems a bit too far fetched and again needs to be checked with other sample models also.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>This started out as a fun experiment to test out the OpenPipe ruler framework and AutoRL environment and in between turned serious for a while, where I had many ideas of doing this without ruler by adopting either making a whole environment from the ground up or using any other framework that provides better reasoning/thought communication for tackling the problem of ruler scores not achieving their real values due to the accumulation of either a lot of parameters to verify and thereby missing some or the other one or misalignment of the algorithm used with the outputs.</p>
+<p>Another suggestion that I received was testing the judges with a specific number of shots per each judge, like chain of thought shot (have a strong intuition that this would help increasing the scores), example shots, safety shots among others so we don’t have to consider each parameter together and make the process more clumsier, reducing biases/variances if any and provide more thinking space.</p>
+<p>Thank you for reading this and for any feedback, dm or mail me</p>]]></summary>
+</entry>
+<entry>
+    <title>quscii</title>
+    <link href="https://weeyev.github.io/posts/quscii.html" />
+    <id>https://weeyev.github.io/posts/quscii.html</id>
+    <published>2025-04-20T00:00:00Z</published>
+    <updated>2025-04-20T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<figure>
+<img src="/images/logo.webp" alt="QuSCII Logo" />
+<figcaption aria-hidden="true">QuSCII Logo</figcaption>
+</figure>
+<p>First things first, check out the project: <a href="#">here</a></p>
+<p>This blog is an explanation/guide to the same, I will not spend a lot of time on the truistic parts of qubits, and quantum computing. However, if this is your first time hearing those terms, it is probably a good idea watch the great video by 3b1b <a href="#">here</a> or if you’re feeling too adventurous you can refer to something that I wrote while explaining myself (it might not be that accurate though and if you have some more time refer to the 3b1b video).</p>
+<p>Just as fun facts, I will mention some differences in the classical approaches vs. the quantum approach here:</p>
+<ul>
+<li>The usual ascii generators map the pixel values directly from the 1-d space, giving the same output for each pixel every time, while when the characters are mapped here from the Hilbert Space of dimensions 2^n -&gt; n = number of qubits, on every run, they are different, giving it a unique form.</li>
+<li>The complexity of classical versions is O(n), whereas for the quantum ones, it is O(2^n), for this project, we will be working only with 2 qubits, making it feasible for outputs.</li>
+<li>The randomness effect scales drastically after the threshold value of around 0.4, a comparison to realise this is below, also a graph visualisation would have been better but I couldn’t find a good way to do that.</li>
+</ul>
+<figure>
+<img src="/images/img1.webp" alt="Randomness Effect Comparison" />
+<figcaption aria-hidden="true">Randomness Effect Comparison</figcaption>
+</figure>
+<p>Alright, that’s a lot of throat clearing for a while, let’s jump into the implementation.</p>
+<p>The whole project is essentially using 3 major libraries: qiskit-&gt; for everything quantum, pillow -&gt; for everything image related and FastAPI-&gt; for the hosting.</p>
+<blockquote>
+<p><strong>DISCLAIMER</strong>
+1) The site might take some time to get working- bear with me on this.
+2) The regular computation time takes ~ 2-3 minutes, so have some patience, if it still does not work, try with a different image or dm me on x dot com
+3) This is a fun project and by no standards is for production, be ready to get some bugs along the way.</p>
+</blockquote>
+<h2 id="architecture">Architecture</h2>
+<p>The architecture mainly comprises of 3 subparts: Input Processing, Encoding, and Transformation Block.</p>
+<figure>
+<img src="/images/img2.webp" alt="Architecture Diagram" />
+<figcaption aria-hidden="true">Architecture Diagram</figcaption>
+</figure>
+<p>Let’s look at each part separately now and try to give a code demo for the same.</p>
+<h2 id="input-processing">Input Processing</h2>
+<p>The different features like height, width, r, g, b values are extracted from the input image after we resize it for generality across all inputs. For all practical purposes, instead of processing the image pixel by pixel, we instead split it in into rows and columns of block sizes which helps in faster processing of images by reducing the dimensions of the input image.</p>
+<p>Let’s consider an example image of dimensions 16x16 pixels, and we define the block size as 4, making the total number of blocks in the image 16, with each block having the dimension of 4x4. Now, instead of iterating over each pixel in the image, we will be iterating over these blocks, thus significantly improving the computation time and maintaining consistency in the output.</p>
+<figure>
+<img src="/images/img3.webp" alt="Block Processing Example" />
+<figcaption aria-hidden="true">Block Processing Example</figcaption>
+</figure>
+<p>This is a standard process, and it helps us in our approach as instead of making 256 total different circuits every time, we can make do with only 16, hence making the whole process faster by a factor of (block_size)^2.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading the images</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>brightness_cache <span class="op">=</span> {}</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    input_image <span class="op">=</span> Image.<span class="bu">open</span>(inp_path)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">FileNotFoundError</span>:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Image not found.&quot;</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>input_width, input_height <span class="op">=</span> input_image.size</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> input_height <span class="op">//</span> block_size</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>cols <span class="op">=</span> input_width <span class="op">//</span> block_size</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>resized <span class="op">=</span> input_image.resize((cols, rows), Image.Resampling.LANCZOS)</span></code></pre></div>
+<h2 id="encoding">Encoding</h2>
+<p>After the necessary classical information about the r, g, b values are fetched, we now convert and merge them into a single brightness value referred to as perceived brightness- done to increase perception for human eyes as it’s a common fact that eyes are more sensitive to colors in the order green&gt;red&gt;blue. I came across this article a while back on the same topic and found it pretty interesting. This also helps in smooth mapping of characters and ensuring that there aren’t any variations in the outputs- all the pixels of brightness, suppose 150, should only be mapped to a specific character like “/”. The formula for perceived brightness is:</p>
+<p><em>B_perceived = 0.2126⋅R + 0.7152⋅G + 0.0722⋅B</em></p>
+<p>The encoding is done by defining a quantum circuit of 2 qubits and mapping the brightness values linearly into rotation angles of the state vector. The range of values (0,255) is mapped to (0 to π/2), with 0 representing black and 255 being white.</p>
+<figure>
+<img src="/images/img4.webp" alt="Quantum Circuit Encoding" />
+<figcaption aria-hidden="true">Quantum Circuit Encoding</figcaption>
+</figure>
+<p>The conversion is executed by using the rotation along the y-axis gate on both qubits 0 and 1. The value of rotation is calculated in radians by:</p>
+<p><em>θ = (val / 255) ⋅ π/2</em></p>
+<p>Now we are ready to manipulate these state vectors and rotate them to induce quantumness.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># getting the data pixel wise</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(rows):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> y <span class="kw">in</span> <span class="bu">range</span>(cols):</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        r, g, b <span class="op">=</span> resized.convert(<span class="st">&quot;RGB&quot;</span>).getpixel((y, x))</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        bright <span class="op">=</span> <span class="bu">int</span>(<span class="fl">0.2126</span> <span class="op">*</span> r <span class="op">+</span> <span class="fl">0.7152</span> <span class="op">*</span> g <span class="op">+</span> <span class="fl">0.0722</span> <span class="op">*</span> b)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># encoding into quantum states</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>num_qubits <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>qc <span class="op">=</span> QuantumCircuit(num_qubits, num_qubits)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> (val <span class="op">/</span> <span class="fl">255.0</span>) <span class="op">*</span> (pi <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>qc.ry(theta, <span class="dv">0</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>qc.ry(theta, <span class="dv">1</span>)</span></code></pre></div>
+<h2 id="transformation">Transformation</h2>
+<p>The quantum effect is controlled by the magnitude; at zero it’s your normal ascii generator, subtle effects start showing after ~0.3-0.4. At any value greater than 0, we first put the qubits in superposition with the hadamard gate and eventually use the controlled rotation gate for changing the values of theta in each pixel. For nuanced effects, the angle limit that we assume is π/4 instead of π/2. This is simulated for a single shot right now, as the execution time increases rapidly with the usual 1024 shots (~1024 times increase).</p>
+<p>After conversion, we get the counts for each state -&gt; convert them to integers from binary and normalize them to values between 0-255, giving us the processed brightness. To preserve the originalness of the image while adding these quantum effects, LERP - Linear Interpolation is used, it smoothly blends both the values with a weighted average on the basis of magnitude value while processing. The difference between using LERP and normal averaging lies in the flexibility that LERP inherently has, unlike hard-setting a value, it dynamically varies based on the magnitudes. This is how it looks in our use case:</p>
+<p><em>blended = ⌊val⋅(1−magnitude) + qbright⋅magnitude⌋</em></p>
+<p>The mapping is performed on the blended brightness by fetching the specific characters for each processed pixel block from the character set.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check for quantumness control</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> magnitude <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    qc.h(<span class="dv">0</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    qc.cry((val <span class="op">/</span> <span class="fl">255.0</span>) <span class="op">*</span> (pi <span class="op">/</span> <span class="dv">4</span>), <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    qc.measure(<span class="bu">range</span>(num_qubits), <span class="bu">range</span>(num_qubits))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    simulator <span class="op">=</span> Aer.get_backend(<span class="st">&#39;qasm_simulator&#39;</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    final <span class="op">=</span> transpile(qc, simulator)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> simulator.run(final, shots<span class="op">=</span><span class="dv">1</span>).result()</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    counts <span class="op">=</span> result.get_counts(qc)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> counts:</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        key <span class="op">=</span> <span class="bu">list</span>(counts.keys())[<span class="dv">0</span>]</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        qval <span class="op">=</span> <span class="bu">int</span>(key, <span class="dv">2</span>) <span class="op">/</span> (<span class="dv">2</span><span class="op">**</span>num_qubits <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        qbright <span class="op">=</span> qval <span class="op">*</span> <span class="dv">255</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        blended <span class="op">=</span> <span class="bu">int</span>(val <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> magnitude) <span class="op">+</span> qbright <span class="op">*</span> magnitude)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        brightness_cache[val] <span class="op">=</span> blended</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>r_new <span class="op">=</span> get_brightness(r)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>g_new <span class="op">=</span> get_brightness(g)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>b_new <span class="op">=</span> get_brightness(b)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>fill <span class="op">=</span> (r_new, g_new, b_new)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>ascii_index <span class="op">=</span> <span class="bu">min</span>(<span class="bu">int</span>((bright <span class="op">/</span> <span class="dv">255</span>) <span class="op">*</span> (<span class="bu">len</span>(ascii_set) <span class="op">-</span> <span class="dv">1</span>)), <span class="bu">len</span>(ascii_set) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>char <span class="op">=</span> ascii_set[ascii_index]</span></code></pre></div>
+<h2 id="output">Output</h2>
+<p>The output canvas is initialized with the dimensions as number_charecters x charecter_dim, we select the character height and width according to the input dimensions of the font.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># redrawing back to canvas</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>font <span class="op">=</span> ImageFont.load_default()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>bbox <span class="op">=</span> font.getbbox(<span class="st">&quot;A&quot;</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>char_width <span class="op">=</span> bbox[<span class="dv">2</span>] <span class="op">-</span> bbox[<span class="dv">0</span>]</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>char_height <span class="op">=</span> bbox[<span class="dv">3</span>] <span class="op">-</span> bbox[<span class="dv">1</span>]</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>output_width <span class="op">=</span> cols <span class="op">*</span> char_width</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>output_height <span class="op">=</span> rows <span class="op">*</span> char_height</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> Image.new(<span class="st">&quot;RGB&quot;</span>, (output_width, output_height), <span class="st">&quot;black&quot;</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>draw <span class="op">=</span> ImageDraw.Draw(output)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>draw.text((y <span class="op">*</span> char_width, x <span class="op">*</span> char_height), char, font<span class="op">=</span>font, fill<span class="op">=</span>fill)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span> output.convert(<span class="st">&#39;RGB&#39;</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>output.save(out_path)</span></code></pre></div>
+<p><img src="/images/img5.webp" alt="Sample Output - Microsoft Explorer Logo" />
+<em>A sample output of microsoft explorer logo</em></p>
+<h2 id="deployment">Deployment</h2>
+<p>I hate this part, it is just annoyingly shitty and adds no value whatsoever. FastAPI has been the go to for deploying any python project, but the stupid problem that comes with it is scaling it for multiple users as render kept blocking concurrent requests. Initially I got into redis but had some issues, and then down the line decided to settle with the inbuilt background tasks, it works fine enough and I have no intentions of investing more time into scaling something which is a fun proejct at the end of the day.</p>
+<p>I had a lot of fun making this, learnt a lot about both the things -the ones that I thought I knew about and those that I didn’t, whenever I get back to this, would love to do this with videos.</p>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="#">Converting an Image to ASCII with Python</a></li>
+<li><a href="#">yeaag- <span class="citation" data-cites="ronin">@ronin</span> for the idea</a></li>
+</ul>]]></summary>
+</entry>
+
+</feed>

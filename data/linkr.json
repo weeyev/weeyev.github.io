@@ -1,0 +1,918 @@
+{
+  "version": 1,
+  "exported_at": "2026-11-10T16:46:35.766Z",
+  "links": [
+    {
+      "title": "Transformers learn factored representations",
+      "url": "https://proceedings.mlr.press/v306/shai26a.html",
+      "captured_at": "2026-11-10T16:36:22.972Z",
+      "status": "unread"
+    },
+    {
+      "title": "[2611.11862] Are UFOs Real? Introducing Unified Factored Organizers",
+      "url": "https://arxiv.org/abs/2611.11862",
+      "captured_at": "2026-11-10T16:33:57.399Z",
+      "status": "unread"
+    },
+    {
+      "title": "New synthesis for the field of open-endedness | LILA",
+      "url": "https://www.lila.ai/news/a-new-synthesis-for-the-field-of-open-endedness",
+      "captured_at": "2026-11-10T16:13:08.342Z",
+      "status": "unread"
+    },
+    {
+      "title": "manovich-interactive/text-time-lapse/README.md at main · levmanovich/manovich-interactive",
+      "url": "https://github.com/levmanovich/manovich-interactive/blob/main/text-time-lapse/README.md",
+      "captured_at": "2026-11-10T14:31:13.007Z",
+      "status": "unread"
+    },
+    {
+      "title": "I did a meditation and it sort of changed my personality?! | benkuhn.net",
+      "url": "https://www.benkuhn.net/meditation/",
+      "captured_at": "2026-11-10T05:51:01.299Z",
+      "status": "unread"
+    },
+    {
+      "title": "anthropic.com/research/components-of-agent-memory",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "captured_at": "2026-11-07T04:04:03.720Z",
+      "status": "unread"
+    },
+    {
+      "title": "https://www.anthropic.com/research/components-of-agent-memory",
+      "url": "https://t.co/uUEN4bNkr9",
+      "captured_at": "2026-11-07T04:04:03.028Z",
+      "status": "unread"
+    },
+    {
+      "title": "[2609.09438] Emergence of criticality in models of real neurons",
+      "url": "https://arxiv.org/abs/2609.09438",
+      "captured_at": "2026-11-03T05:31:22.816Z",
+      "status": "unread"
+    },
+    {
+      "title": "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights",
+      "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+      "captured_at": "2026-11-03T05:03:47.579Z",
+      "status": "unread"
+    },
+    {
+      "title": "Forms of life, forms of mind | Dr. Michael Levin | How I write papers",
+      "url": "https://thoughtforms.life/how-i-write-papers/",
+      "captured_at": "2026-11-02T10:28:22.924Z",
+      "status": "unread"
+    },
+    {
+      "title": "ZO Research Updates",
+      "url": "https://apaz.dev/blog/ZO_Research_Updates.html",
+      "captured_at": "2026-10-31T14:17:12.387Z",
+      "status": "unread"
+    },
+    {
+      "title": "Welcome - Homepage of Gabriel Peyré",
+      "url": "https://www.gpeyre.com/",
+      "captured_at": "2026-10-31T06:41:18.579Z",
+      "status": "unread"
+    },
+    {
+      "title": "Ten simple rules for structuring papers | bioRxiv",
+      "url": "https://www.biorxiv.org/content/10.1101/088278v5.full.pdf+html",
+      "captured_at": "2026-10-29T12:57:38.368Z",
+      "status": "unread"
+    },
+    {
+      "title": "Neuromodulation-inspired gated associative memory networks: Extended memory retrieval and emergent multistability | PNAS",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2607559123",
+      "captured_at": "2026-10-29T12:56:28.464Z",
+      "status": "unread"
+    },
+    {
+      "title": "Shiling Liang | 梁师翎 on X: \"Living systems run on an energy budget. Cells spend ATP or light to keep their chemistry away from equilibrium. In our new @PhysRevX paper, Paolo De Los Rios, Daniel Busiello and I work out which steady states a given energy budget can reach in any chemical reaction network https://t.co/xsoWWOdYQY\" / X",
+      "url": "https://x.com/ShilingLiang/status/2115126918513328209",
+      "captured_at": "2026-10-28T11:11:06.080Z",
+      "status": "unread"
+    },
+    {
+      "title": "Just a moment...",
+      "url": "https://link.aps.org/doi/10.1103/g875-ldn5?__cf_chl_rt_tk=lxqoE5_ij6gOTJy3PRS9_ILs9K2DoDsNP24EfDT_INs-1793185863-1.0.1.1-miho0nRW5t.0NFLRMnDL3Xat.CB83PJuhoniRrQ4F7A",
+      "captured_at": "2026-10-28T11:11:03.573Z",
+      "status": "unread"
+    },
+    {
+      "title": "https://doi.org/10.1103/g875-ldn5",
+      "url": "https://t.co/trRCWSJivN",
+      "captured_at": "2026-10-28T11:11:02.462Z",
+      "status": "unread"
+    },
+    {
+      "title": "Grothendieck: Allons-nous continuer la recherche scientifique?",
+      "url": "https://chinsley.notion.site/Grothendieck-Allons-nous-continuer-la-recherche-scientifique-891a009e837241ad85ea15bf0f7db621",
+      "captured_at": "2026-10-25T06:02:27.279Z",
+      "status": "unread"
+    },
+    {
+      "title": "A Guide to Starting a PhD - Shubhra Mishra",
+      "url": "https://substack.com/home/post/p-221644145",
+      "captured_at": "2026-10-23T04:57:43.677Z",
+      "status": "unread"
+    },
+    {
+      "title": "A Life Really Worth Living",
+      "url": "https://www.gleech.org/life",
+      "captured_at": "2026-10-19T14:32:26.204Z",
+      "status": "unread"
+    },
+    {
+      "title": "Cellular scaling laws in the mammalian brain: Cell",
+      "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01017-2",
+      "captured_at": "2026-10-19T10:35:52.267Z",
+      "status": "unread"
+    },
+    {
+      "title": "Dashavatara and Evolutionary Theory - Back to Godhead",
+      "url": "https://btg.krishna.com/dashavatara-and-evolutionary-theory/",
+      "captured_at": "2026-10-18T14:44:56.288Z",
+      "status": "unread"
+    },
+    {
+      "title": "NEURAL SCIENCE DOCTORAL PROGRAM - Home",
+      "url": "https://neuralscience.nyu.edu/",
+      "captured_at": "2026-10-14T11:15:00.275Z",
+      "status": "unread"
+    },
+    {
+      "title": "Theories of structure, dynamics, and plasticity in neural circuits | Academic Commons",
+      "url": "https://academiccommons.columbia.edu/doi/10.7916/1a3g-hw46",
+      "captured_at": "2026-10-14T09:01:54.324Z",
+      "status": "unread"
+    },
+    {
+      "title": "[2606.16138] Closing the Approximation Gap in Simulation-free Latent SDEs",
+      "url": "https://arxiv.org/abs/2606.16138",
+      "captured_at": "2026-10-14T05:44:19.469Z",
+      "status": "unread"
+    },
+    {
+      "title": "Simply Typed Lambda Calculus | Hype For Types",
+      "url": "https://hypefortypes.github.io/notes/pages/stlc.html",
+      "captured_at": "2026-10-14T02:44:56.929Z",
+      "status": "unread"
+    },
+    {
+      "title": "Deep Learning Alchemy | Stanford CS 312",
+      "url": "https://deep-learning-alchemy.github.io/#schedule",
+      "captured_at": "2026-10-14T02:28:07.500Z",
+      "status": "unread"
+    },
+    {
+      "title": "behind the scenes of paper writing",
+      "url": "https://www.sophielwang.com/blog/paper-writing",
+      "captured_at": "2026-10-13T04:42:05.158Z",
+      "status": "unread"
+    },
+    {
+      "title": "Yuhai Tu | Flatiron Institute",
+      "url": "https://users.flatironinstitute.org/~ytu10/#research1",
+      "captured_at": "2026-10-11T13:25:06.219Z",
+      "status": "unread"
+    },
+    {
+      "title": "R SVG Plot",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Correlation_examples2.svg",
+      "captured_at": "2026-10-10T11:16:15.819Z",
+      "status": "unread"
+    },
+    {
+      "title": "Overcoming key challenges in the evolutionary transition to multicellularity | Nature",
+      "url": "https://www.nature.com/articles/s41586-026-11038-w",
+      "captured_at": "2026-10-10T05:16:25.418Z",
+      "status": "unread"
+    },
+    {
+      "title": "Parametric neural control differentiates top neural network models of primate visual cortex | bioRxiv",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.16.745063v1",
+      "captured_at": "2026-10-10T05:03:55.166Z",
+      "status": "unread"
+    },
+    {
+      "title": "Question First - Structure Research Projects, Papers, and Grants",
+      "url": "https://www.questionfirst.org/",
+      "captured_at": "2026-10-10T04:57:37.757Z",
+      "status": "unread"
+    },
+    {
+      "title": "Shared Geometry as a Rosetta Stone",
+      "url": "https://dominik-schnaus.github.io/unpaired-rosetta/",
+      "captured_at": "2026-10-10T02:57:25.609Z",
+      "status": "unread"
+    },
+    {
+      "title": "[2610.12426] Lyapunov spectrum of random neural networks",
+      "url": "https://arxiv.org/abs/2610.12426",
+      "captured_at": "2026-10-09T16:23:21.802Z",
+      "status": "unread"
+    },
+    {
+      "title": "(auto)formalization, but why – Proofs and Prompts",
+      "url": "https://proofsandprompts.com/2026/09/08/autoformalization-but-why/",
+      "captured_at": "2026-10-08T12:45:49.784Z",
+      "status": "unread"
+    },
+    {
+      "title": "[2603.10055] Training Language Models via Neural Cellular Automata",
+      "url": "https://arxiv.org/abs/2603.10055",
+      "captured_at": "2026-10-07T14:35:30.358Z",
+      "status": "unread"
+    },
+    {
+      "title": "Explainability as a form of system closure",
+      "url": "https://jamiesimon.io/blog/explainability-as-system-closure/",
+      "captured_at": "2026-10-06T07:10:22.949Z",
+      "status": "unread"
+    },
+    {
+      "title": "Beyond single-cell sensory representations in cortex - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0959438826001169",
+      "captured_at": "2026-10-04T13:49:26.128Z",
+      "status": "unread"
+    },
+    {
+      "title": "Emergent Abilities in Large Language Models: A Survey",
+      "url": "https://arxiv.org/pdf/2503.05788",
+      "captured_at": "2026-10-04T07:24:10.604Z",
+      "status": "unread"
+    },
+    {
+      "title": "A hitchhiker's guide to PhD apps - Sean's Substack",
+      "url": "https://seanmeng17.substack.com/p/a-hitchhikers-guide-to-phd-apps",
+      "captured_at": "2026-10-03T10:59:37.860Z",
+      "status": "unread"
+    },
+    {
+      "title": "Diffusion will be everywhere",
+      "url": "https://varunneal.github.io/essays/diffusion",
+      "captured_at": "2026-10-03T07:00:44.465Z",
+      "status": "unread"
+    },
+    {
+      "title": "[2603.15198] Geometric framework for biological evolution",
+      "url": "https://arxiv.org/abs/2603.15198",
+      "captured_at": "2026-10-02T07:15:59.755Z",
+      "status": "unread"
+    },
+    {
+      "title": "A Morphospace Exploration Using a General Model of Development Reveals a Basic Set of Morphologies for Early Animal Development and Evolution - Cano‐Fernández - 2025 - Journal of Experimental Zoology Part B: Molecular and Developmental Evolution - Wiley Online Library",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/jez.b.23279",
+      "captured_at": "2026-10-02T07:02:05.082Z",
+      "status": "unread"
+    },
+    {
+      "title": "Forms of life, forms of mind | Dr. Michael Levin | Platonic space: where cognitive and morphological patterns come from (besides genetics and environment)",
+      "url": "https://thoughtforms.life/platonic-space-where-cognitive-and-morphological-patterns-come-from-besides-genetics-and-environment/",
+      "captured_at": "2026-10-02T06:53:34.832Z",
+      "status": "unread"
+    },
+    {
+      "title": "Samuel Sokota on X: \"In our Nature paper, we introduce the first superhuman Stratego AI, which we built using general techniques that we developed for RL &amp; test-time compute under imperfect information. 1/N https://t.co/KYrmGlrbsW\" / X",
+      "url": "https://x.com/ssokota/status/2105362024238887176",
+      "captured_at": "2026-10-01T06:16:17.587Z",
+      "status": "unread"
+    },
+    {
+      "title": "phdiary",
+      "url": "https://www.gleech.org/diary",
+      "captured_at": "2026-09-30T12:56:19.889Z",
+      "status": "unread"
+    },
+    {
+      "title": "(64) \"Towards a Platonic Intelligence with Unified Factored Representations\" by Akarsh Kumar - YouTube",
+      "url": "https://www.youtube.com/watch?v=1mXUFweWOug&t=2637s",
+      "captured_at": "2026-09-30T08:04:50.318Z",
+      "status": "unread"
+    },
+    {
+      "title": "(64) \"On the (Platonic) Nature of Things\" by Karl Friston - YouTube",
+      "url": "https://www.youtube.com/watch?v=dFDEoma219Y",
+      "captured_at": "2026-09-30T08:04:36.233Z",
+      "status": "unread"
+    },
+    {
+      "title": "Michael Levin made me believe in gods - Seeds of Science",
+      "url": "https://substack.com/inbox/post/217060018",
+      "captured_at": "2026-09-29T15:00:15.743Z",
+      "status": "unread"
+    },
+    {
+      "title": "Advice to Graduate Students and Researchers",
+      "url": "https://www.ece.ucdavis.edu/~jowens/advice.html",
+      "captured_at": "2026-09-29T11:11:39.343Z",
+      "status": "unread"
+    },
+    {
+      "title": "502 Bad Gateway",
+      "url": "https://wtcui.ca/hourglass/live",
+      "captured_at": "2026-09-29T01:53:45.878Z",
+      "status": "unread"
+    },
+    {
+      "title": "The KL Divergence: From Information to Density Estimation",
+      "url": "https://gregorygundersen.com/blog/2019/01/22/kld/",
+      "captured_at": "2026-09-28T10:45:34.995Z",
+      "status": "unread"
+    },
+    {
+      "title": "Episodic and associative memory from spatial scaffolds in the hippocampus | Nature",
+      "url": "https://www.nature.com/articles/s41586-024-08392-y",
+      "captured_at": "2026-09-27T13:50:45.622Z",
+      "status": "unread"
+    },
+    {
+      "title": "BurnsHasselblattRevised-1.dvi",
+      "url": "https://archive.math.arizona.edu/dwang/BurnsHasselblattRevised-1.pdf",
+      "captured_at": "2026-09-27T13:21:59.875Z",
+      "status": "unread"
+    },
+    {
+      "title": "A Straightforward Explanation of the Good Regulator Theorem — LessWrong",
+      "url": "https://www.lesswrong.com/posts/JQefBJDHG6Wgffw6T/a-straightforward-explanation-of-the-good-regulator-theorem",
+      "captured_at": "2026-09-26T13:47:26.144Z",
+      "status": "unread"
+    },
+    {
+      "title": "Algebra Unveils Deep Learning -- An Invitation to Neuroalgebraic Geometry",
+      "url": "https://arxiv.org/pdf/2501.18915",
+      "captured_at": "2026-09-26T04:32:15.375Z",
+      "status": "unread"
+    },
+    {
+      "title": "4 gravitons | Stories about physics from someone who's been there",
+      "url": "https://4gravitons.com/",
+      "captured_at": "2026-09-26T04:07:44.521Z",
+      "status": "unread"
+    },
+    {
+      "title": "Elements of Applied Bifurcation Theory, Second Edition",
+      "url": "https://www.ma.imperial.ac.uk/~dturaev/kuznetsov.pdf",
+      "captured_at": "2026-09-25T13:20:32.776Z",
+      "status": "unread"
+    },
+    {
+      "title": "Research · Chi-Ning Chou 周紀寧",
+      "url": "https://cnchou.github.io/research/",
+      "captured_at": "2026-09-25T07:09:30.561Z",
+      "status": "unread"
+    },
+    {
+      "title": "The True Method",
+      "url": "https://lance.fortnow.com/blogfiles/Leibniz%20-%20The%20True%20Method.pdf",
+      "captured_at": "2026-09-25T06:19:59.635Z",
+      "status": "unread"
+    },
+    {
+      "title": "An analytic theory of creativity in convolutional diffusion models",
+      "url": "https://arxiv.org/pdf/2412.20292",
+      "captured_at": "2026-09-24T14:04:31.025Z",
+      "status": "unread"
+    },
+    {
+      "title": "The Kinetics of Training: A Driven-Nucleation Rate Law for Emergence, Plasticity Loss, and Circuit Control in Language Models",
+      "url": "https://arxiv.org/pdf/2607.27281v1",
+      "captured_at": "2026-09-24T11:13:31.112Z",
+      "status": "unread"
+    },
+    {
+      "title": "koopman_operator.pdf",
+      "url": "https://mitchellostrow.github.io/assets/pdf/writing/koopman_operator.pdf",
+      "captured_at": "2026-09-24T11:09:42.486Z",
+      "status": "unread"
+    },
+    {
+      "title": "A metric for comparing complex systems by their dynamics | bioRxiv",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.07.16.738953v2",
+      "captured_at": "2026-09-24T10:55:34.721Z",
+      "status": "unread"
+    },
+    {
+      "title": "Probability for Artificial Intelligence",
+      "url": "https://pai.stanford.edu/apply/pai1/student/learn/probability/concept1?apply=pai1&applyRole=student",
+      "captured_at": "2026-09-23T14:10:20.578Z",
+      "status": "unread"
+    },
+    {
+      "title": "Gary Rubinstein's Evolution Of Geometry Curriculum Project – A place for me to publish my research for my sabbatical project 2026-2027",
+      "url": "https://geometrycurriculum.wordpress.com/",
+      "captured_at": "2026-09-22T14:02:00.085Z",
+      "status": "unread"
+    },
+    {
+      "title": "Liber Primus Unsolved Pages | Uncovering Cicada Wiki | Fandom",
+      "url": "https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages",
+      "captured_at": "2026-09-22T05:11:18.287Z",
+      "status": "unread"
+    },
+    {
+      "title": "[1709.08492] A pictorial introduction to differential geometry, leading to Maxwell's equations as three pictures",
+      "url": "https://arxiv.org/abs/1709.08492",
+      "captured_at": "2026-09-19T14:52:46.855Z",
+      "status": "unread"
+    },
+    {
+      "title": "Do One New Thing A Day To Solve Your Problems - Algon33",
+      "url": "https://algon33.substack.com/p/do-one-new-thing-a-day-to-solve-your",
+      "captured_at": "2026-09-17T13:39:42.007Z",
+      "status": "done"
+    },
+    {
+      "title": "The Origin of Biological Information and the Higher Taxonomic Categories | Discovery Institute",
+      "url": "https://www.discovery.org/a/2177/",
+      "captured_at": "2026-09-15T15:13:31.006Z",
+      "status": "done"
+    },
+    {
+      "title": "[2601.12424] If Grid Cells are the Answer, What is the Question? A Review of Normative Grid Cell Theory",
+      "url": "https://arxiv.org/abs/2601.12424",
+      "captured_at": "2026-09-11T10:11:16.698Z",
+      "status": "unread"
+    },
+    {
+      "title": "Representing states and spaces, by Kim Stachenfeld & Tim Behrens - Google Docs",
+      "url": "https://docs.google.com/document/d/1baI3oN_jCkGfxJ6RZCFeAes8qi7bKxwnDi3vYFX2u7s/edit?tab=t.0",
+      "captured_at": "2026-09-10T02:44:34.779Z",
+      "status": "unread"
+    },
+    {
+      "title": "How much neuroscience does a neuroscientist need to know?",
+      "url": "https://arxiv.org/pdf/2601.02063",
+      "captured_at": "2026-09-09T04:47:27.863Z",
+      "status": "done"
+    },
+    {
+      "title": "Rapid spatial cognition in mice, with and without neocortex and hippocampus | bioRxiv",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.08.30.747945v1",
+      "captured_at": "2026-09-09T04:18:54.679Z",
+      "status": "unread"
+    },
+    {
+      "title": "Recurrence is required to capture the representational dynamics of the human visual system - PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31591217/",
+      "captured_at": "2026-09-09T02:47:14.259Z",
+      "status": "unread"
+    },
+    {
+      "title": "Xena | Mathematicians learning Lean by doing.",
+      "url": "https://xenaproject.wordpress.com/",
+      "captured_at": "2026-09-07T15:30:39.936Z",
+      "status": "done"
+    },
+    {
+      "title": "A unified theory for the computational and mechanistic origins of grid cells - PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36306779/",
+      "captured_at": "2026-09-07T06:05:04.723Z",
+      "status": "unread"
+    },
+    {
+      "title": "What’s the role of spontaneous neural activity during sleep? | The Transmitter: Neuroscience News and Perspectives",
+      "url": "https://www.thetransmitter.org/brain-inspired/when-we-sleep-our-brain-is-filled-with-spontaneous-neural-activity-what-is-it-doing/",
+      "captured_at": "2026-09-07T05:14:31.978Z",
+      "status": "unread"
+    },
+    {
+      "title": "[2608.29530] The Emergent Symbolic Structure of Artificial Neural Networks",
+      "url": "https://arxiv.org/abs/2608.29530",
+      "captured_at": "2026-09-07T02:46:36.371Z",
+      "status": "unread"
+    },
+    {
+      "title": "[2510.02649] Engineering Emergence",
+      "url": "https://arxiv.org/abs/2510.02649",
+      "captured_at": "2026-09-07T02:46:10.907Z",
+      "status": "unread"
+    },
+    {
+      "title": "The Rise and Fall of Agent Civilizations",
+      "url": "https://www.dwarkesh.com/p/openai-huggingface",
+      "captured_at": "2026-09-06T06:17:50.234Z",
+      "status": "done"
+    },
+    {
+      "title": "Astra & Reasoning Effeciency - ueaj - Obsidian Publish",
+      "url": "https://publish.obsidian.md/ueaj/Machine+Learning/Post-training/Astra+%26+Reasoning+Effeciency",
+      "captured_at": "2026-09-05T13:42:08.557Z",
+      "status": "done"
+    },
+    {
+      "title": "(1) Surya Ganguli: The Physics of Intelligence - YouTube",
+      "url": "https://www.youtube.com/watch?v=XsQxIYzK-OM",
+      "captured_at": "2026-09-02T16:26:40.838Z",
+      "status": "unread"
+    },
+    {
+      "title": "Yunus Şahin on X: \"Bu inanılmaz \"güzel\" bir makale. Adeta şiir gibi, huşu içinde bakakaldığın bir tablo gibi... Karmaşıklığın mimarisi... Evrende neden iç içe geçmiş yapıların bir hiyerarşisini görüyoruz? Atomlar, moleküller, organeller, hücreler, dokular, organlar vs... Çünkü hiyerarşik ve https://t.co/LWaTPh9P2t\" / X",
+      "url": "https://x.com/cogsciadam/status/2094807217031598412?s=20",
+      "captured_at": "2026-09-02T12:57:57.022Z",
+      "status": "unread"
+    },
+    {
+      "title": "[2112.00119] Forgetting leads to chaos in attractor networks",
+      "url": "https://arxiv.org/abs/2112.00119",
+      "captured_at": "2026-08-31T06:47:58.930Z",
+      "status": "unread"
+    },
+    {
+      "title": "Cyberspace Evolutionary Automata - ueaj - Obsidian Publish",
+      "url": "https://publish.obsidian.md/ueaj/Machine+Learning/Scaling+Laws/Cyberspace+Evolutionary+Automata",
+      "captured_at": "2026-08-31T06:38:25.558Z",
+      "status": "done"
+    },
+    {
+      "title": "[2411.08197] What Representational Similarity Measures Imply about Decodable Information",
+      "url": "https://arxiv.org/abs/2411.08197",
+      "captured_at": "2026-08-29T10:49:40.691Z",
+      "status": "unread"
+    },
+    {
+      "title": "Simulated Users & Sad LLMs",
+      "url": "https://1a3orn.com/sub/essays-why-bad.html",
+      "captured_at": "2026-08-28T04:43:39.021Z",
+      "status": "done"
+    },
+    {
+      "title": "Continuous diffusion language models – Sander Dieleman",
+      "url": "https://sander.ai/2026/08/24/continuous-dlms.html?v=1",
+      "captured_at": "2026-08-24T11:14:28.314Z",
+      "status": "unread"
+    },
+    {
+      "title": "one must imagine sisyphus full of ideas: on exercising the idea muscle – sankalp's blog",
+      "url": "https://sankalp.bearblog.dev/on-idea-generation/",
+      "captured_at": "2026-08-21T12:10:40.800Z",
+      "status": "done"
+    },
+    {
+      "title": "Dynamical Learning Lab",
+      "url": "https://dynamical-learning-lab.github.io/",
+      "captured_at": "2026-08-20T13:56:13.920Z",
+      "status": "done"
+    },
+    {
+      "title": "Developing creative identity",
+      "url": "https://michaelnotebook.com/dci/index.html",
+      "captured_at": "2026-08-16T05:31:37.201Z",
+      "status": "done"
+    },
+    {
+      "title": "The Curved Spacetime of Transformer Architectures",
+      "url": "https://arxiv.org/pdf/2511.03060",
+      "captured_at": "2026-08-15T11:02:21.963Z",
+      "status": "unread"
+    },
+    {
+      "title": "Cycling Across Japan | Nascent Labyrinths | John Allard | Substack",
+      "url": "https://jhallard.substack.com/s/japan-the-scenic-route",
+      "captured_at": "2026-08-15T04:02:26.155Z",
+      "status": "done"
+    },
+    {
+      "title": "Global modules robustly emerge from local interactions and smooth gradients | Nature",
+      "url": "https://www.nature.com/articles/s41586-024-08541-3",
+      "captured_at": "2026-08-14T13:01:42.868Z",
+      "status": "done"
+    },
+    {
+      "title": "ICBINB-BIO | NeurIPS 2026",
+      "url": "https://icbinb-bio.github.io/",
+      "captured_at": "2026-08-13T15:46:39.717Z",
+      "status": "done"
+    },
+    {
+      "title": "Two kinds of introspection - by Henrik Karlsson",
+      "url": "https://www.henrikkarlsson.xyz/p/two-kinds-of-introspection",
+      "captured_at": "2026-08-13T11:42:07.491Z",
+      "status": "done"
+    },
+    {
+      "title": "Complex behavior from intrinsic motivation to occupy future action-state path space | Nature Communications",
+      "url": "https://www.nature.com/articles/s41467-024-49711-1",
+      "captured_at": "2026-08-13T08:50:56.421Z",
+      "status": "done"
+    },
+    {
+      "title": "General relativity from first principles – Adam Brown - YouTube",
+      "url": "https://www.youtube.com/watch?v=QbdbAhaJoCQ",
+      "captured_at": "2026-08-12T10:44:24.518Z",
+      "status": "unread"
+    },
+    {
+      "title": "Incentives are for losers - by Adam Mastroianni",
+      "url": "https://substack.com/home/post/p-209921764",
+      "captured_at": "2026-08-10T06:36:22.513Z",
+      "status": "done"
+    },
+    {
+      "title": "Home | Gilles Castel",
+      "url": "https://castel.dev/",
+      "captured_at": "2026-08-10T02:47:17.970Z",
+      "status": "done"
+    },
+    {
+      "title": "Call for Papers | Sim2Science NeurIPS 2026 Workshop",
+      "url": "https://www.sim2science.com/cfp.html",
+      "captured_at": "2026-08-09T15:36:13.357Z",
+      "status": "done"
+    },
+    {
+      "title": "On burnout - by Yong Zheng-Xin (Yong) - antifragile systems",
+      "url": "https://yongzx.substack.com/p/on-burnout",
+      "captured_at": "2026-08-09T07:03:56.716Z",
+      "status": "done"
+    },
+    {
+      "title": "A tale of two algorithms: Structured slots explain prefrontal sequence memory and are unified with hippocampal cognitive maps: Neuron",
+      "url": "https://www.cell.com/neuron/fulltext/S0896-6273(24)00765-7",
+      "captured_at": "2026-08-09T06:58:10.576Z",
+      "status": "done"
+    },
+    {
+      "title": "Foundations of Large Language Models",
+      "url": "https://arxiv.org/pdf/2501.09223",
+      "captured_at": "2026-08-09T05:44:22.962Z",
+      "status": "unread"
+    },
+    {
+      "title": "Everything that turned out well in my life followed the same design process",
+      "url": "https://www.henrikkarlsson.xyz/p/unfolding",
+      "captured_at": "2026-08-08T07:02:43.330Z",
+      "status": "done"
+    },
+    {
+      "title": "[2604.19740] Generalization at the Edge of Stability",
+      "url": "https://arxiv.org/abs/2604.19740",
+      "captured_at": "2026-08-07T16:05:46.126Z",
+      "status": "unread"
+    },
+    {
+      "title": "You fail to learn if you don't learn to fail | seatedro",
+      "url": "https://seated.ro/posts/learn_to_fail.html",
+      "captured_at": "2026-08-07T05:12:27.555Z",
+      "status": "unread"
+    },
+    {
+      "title": "spike's favorite reads - Google Drive",
+      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRKIMRHaKi5Q4JbPcqyf0Wp2u0i3t_VUkQCnw5e20-klHWlz2ROb40jyV1Zjyw9IpmzuTsVUv-T4Ixn/pubhtml",
+      "captured_at": "2026-08-07T05:12:24.026Z",
+      "status": "unread"
+    },
+    {
+      "title": "If you let AI do your writing, I will come to your house and kill you",
+      "url": "https://samkriss.substack.com/p/if-you-let-ai-do-your-writing-i-will",
+      "captured_at": "2026-08-07T04:34:10.890Z",
+      "status": "done"
+    },
+    {
+      "title": "Numb in India, part 4: Dharma police - by Sam Kriss",
+      "url": "https://samkriss.substack.com/p/numb-in-india-part-4-dharma-police",
+      "captured_at": "2026-08-07T04:31:59.423Z",
+      "status": "done"
+    },
+    {
+      "title": "Idiot Joy Showland | This is why I hate intellectuals",
+      "url": "https://samkriss.com/",
+      "captured_at": "2026-08-07T04:31:46.656Z",
+      "status": "done"
+    },
+    {
+      "title": "(1) Where Do Minds Come From? | Professor Michael Levin | MIT Rap Club - YouTube",
+      "url": "https://www.youtube.com/watch?v=74YABGFfb4A",
+      "captured_at": "2026-08-07T04:30:46.181Z",
+      "status": "done"
+    },
+    {
+      "title": "SIGReg from First Principles",
+      "url": "https://rezabyt.github.io/blogposts/sigreg-tutorial.html",
+      "captured_at": "2026-08-06T14:57:32.851Z",
+      "status": "done"
+    },
+    {
+      "title": "Guardian Angels: LLM Personalization for Productivity and Security · Gwern.net",
+      "url": "https://gwern.net/guardian-angel#guardian-angels",
+      "captured_at": "2026-08-05T09:07:44.626Z",
+      "status": "done"
+    },
+    {
+      "title": "Why Neural Scaling Laws Exist | WeightWatcher",
+      "url": "https://weightwatcher.ai/scaling_laws.html",
+      "captured_at": "2026-08-04T11:45:42.859Z",
+      "status": "unread"
+    },
+    {
+      "title": "2310.19956",
+      "url": "https://arxiv.org/pdf/2310.19956",
+      "captured_at": "2026-08-04T10:55:11.439Z",
+      "status": "done"
+    },
+    {
+      "title": "ニューラル拡散におけるセルラー層と層ラプラシアン - 檜山正幸のキマイラ飼育記 (はてなBlog)",
+      "url": "https://m-hiyama.hatenablog.com/entry/2025/10/28/150558",
+      "captured_at": "2026-07-27T12:55:55.173Z",
+      "status": "done"
+    },
+    {
+      "title": "(7) How to write an okay research paper. - YouTube",
+      "url": "https://www.youtube.com/watch?v=qNlwVGxkG7Q",
+      "captured_at": "2026-07-24T06:09:13.234Z",
+      "status": "unread"
+    },
+    {
+      "title": "Thesis_Alison_Pouplin-2.pdf",
+      "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/350384757/Thesis_Alison_Pouplin-2.pdf",
+      "captured_at": "2026-07-23T15:05:36.907Z",
+      "status": "done"
+    },
+    {
+      "title": "Catching up on Model Based Reinforcement Learning - Google Docs",
+      "url": "https://docs.google.com/document/d/1JYNnyfLVHMp7JACr4G6qAtxIiCSmoKYxuoUXxTwjOIo/edit?tab=t.0#heading=h.thwus8jfyt7u",
+      "captured_at": "2026-07-22T04:58:30.897Z",
+      "status": "done"
+    },
+    {
+      "title": "Riemannian Manifolds: Foundational Concepts",
+      "url": "https://patricknicolas.substack.com/p/riemannian-manifolds-1-foundation",
+      "captured_at": "2026-07-19T09:14:38.348Z",
+      "status": "done"
+    },
+    {
+      "title": "A categorical framework for cellular automata",
+      "url": "https://arxiv.org/pdf/2602.04049",
+      "captured_at": "2026-07-17T13:23:41.812Z",
+      "status": "done"
+    },
+    {
+      "title": "Continual Harness: An Efficient Self-Improving Agent on ARC-AGI-3",
+      "url": "https://continual-harness.github.io/",
+      "captured_at": "2026-07-15T09:31:04.277Z",
+      "status": "done"
+    },
+    {
+      "title": "Holstein.dvi",
+      "url": "https://inspirehep.net/files/e055fcfe4c81cd0fc419cebcc76c8d3d",
+      "captured_at": "2026-07-13T16:55:54.728Z",
+      "status": "done"
+    },
+    {
+      "title": "Kirk Patrick Miller on X: \"@SakanaAILabs Put these two together. This is what I am doing. I applied to work with your lab, but since no lab will touch me, I’ll just give it to you and the world. Wait until I explain how to use this for orchestration. Wish your lab well! 🙏 • https://t.co/SDWS088GAA\" / X",
+      "url": "https://x.com/Chaos2Cured/status/2076650844817379789",
+      "captured_at": "2026-07-13T14:53:19.700Z",
+      "status": "done"
+    },
+    {
+      "title": "Forms of life, forms of mind | Dr. Michael Levin | Self-improvising Memories: a few thoughts around a recent paper",
+      "url": "https://thoughtforms.life/self-improvising-memories-a-few-thoughts-around-a-recent-paper/",
+      "captured_at": "2026-07-11T14:35:09.958Z",
+      "status": "done"
+    },
+    {
+      "title": "Levin Is at It Again | Science and Culture Today",
+      "url": "https://scienceandculture.com/2025/04/biologist-michael-levin-is-at-it-again-now-pushing-at-the-mind-brain-equation/",
+      "captured_at": "2026-07-11T14:34:04.204Z",
+      "status": "done"
+    },
+    {
+      "title": "I no longer believe that it’s possible to achieve extremely high productivity sustained over long periods of time working on difficult projects alone, so now I spend the majority of my working time co-working with my friends over video in my virtual gather.town office - Alexey Guzey",
+      "url": "https://guzey.com/co-working/",
+      "captured_at": "2026-07-11T06:45:15.174Z",
+      "status": "done"
+    },
+    {
+      "title": "Surrender as a non-stupid life strategy - by Sasha Chapin",
+      "url": "https://substack.com/home/post/p-203211010",
+      "captured_at": "2026-07-11T06:45:11.568Z",
+      "status": "done"
+    },
+    {
+      "title": "E. coli chemotaxis: the baffling intelligence of a single cell",
+      "url": "https://jsomers.net/e-coli-chemotaxis/",
+      "captured_at": "2026-07-09T16:21:03.482Z",
+      "status": "done"
+    },
+    {
+      "title": "Read Something Wonderful - If we already understood the brain, would we even know it?",
+      "url": "https://readsomethingwonderful.com/p/174/if-we-already-understood-the-brain-would-we-even-know-it",
+      "captured_at": "2026-07-09T10:21:07.700Z",
+      "status": "done"
+    },
+    {
+      "title": "How to Build a Diffusion Language Model | Kuleshov Group",
+      "url": "https://kuleshov-group.github.io/blog/blog/2026/how-to-build-a-diffusion-language-model/",
+      "captured_at": "2026-07-08T11:47:36.333Z",
+      "status": "done"
+    },
+    {
+      "title": "\"What happened after 2010?\"",
+      "url": "https://gist.github.com/shawwn/3110ab62fa027c7811578f167fa5a3a0",
+      "captured_at": "2026-07-07T10:27:11.669Z",
+      "status": "done"
+    },
+    {
+      "title": "Verbalizable Representations Form a Global Workspace in Language Models",
+      "url": "https://transformer-circuits.pub/2026/workspace/index.html",
+      "captured_at": "2026-07-07T02:31:10.065Z",
+      "status": "done"
+    },
+    {
+      "title": "Spectral Theory Beyond Graphs",
+      "url": "https://simons.berkeley.edu/programs/spectral-theory-beyond-graphs",
+      "captured_at": "2026-07-01T11:28:00.712Z",
+      "status": "done"
+    },
+    {
+      "title": "Scaling To Unfathomable Depth",
+      "url": "https://apaz.dev/blog/Scaling_To_Unfathomable_Depth.html",
+      "captured_at": "2026-06-28T23:55:44.728Z",
+      "status": "done"
+    },
+    {
+      "title": "\"Aging, goal-directedness, and bioelectricity\" by Michael Levin - YouTube",
+      "url": "https://www.youtube.com/watch?v=EeKnxXPy3Xs",
+      "captured_at": "2026-06-28T15:01:52.573Z",
+      "status": "done"
+    },
+    {
+      "title": "Lean Software Scaling Laws · Gwern.net",
+      "url": "https://gwern.net/lean-scaling",
+      "captured_at": "2026-06-28T14:51:56.800Z",
+      "status": "done"
+    },
+    {
+      "title": "Join Us | Systems & Intervention Neuroscience",
+      "url": "https://sin-labs.github.io/joining-us/",
+      "captured_at": "2026-06-27T16:02:26.997Z",
+      "status": "archived"
+    },
+    {
+      "title": "growing up in science - hakwan lau - Google Docs",
+      "url": "https://docs.google.com/document/d/1Vq9iD3CGY59DQnFiw3i7XRDKoTxdl9d3gEdow8KxQTo/edit?tab=t.0",
+      "captured_at": "2026-06-27T15:59:06.976Z",
+      "status": "done"
+    },
+    {
+      "title": "Stuck in a Rut? Here’s Your Way Out",
+      "url": "https://lelouch.dev/blog/escaping-rut/",
+      "captured_at": "2026-06-27T14:18:42.727Z",
+      "status": "done"
+    },
+    {
+      "title": "Scaling Laws, Carefully | Lil'Log",
+      "url": "https://lilianweng.github.io/posts/2026-06-24-scaling-laws/",
+      "captured_at": "2026-06-26T10:17:37.135Z",
+      "status": "done"
+    },
+    {
+      "title": "Emergent Capabilities Arise Randomly from Learning Sparse Attention Patterns",
+      "url": "https://arxiv.org/pdf/2606.25010",
+      "captured_at": "2026-06-26T03:25:00.849Z",
+      "status": "done"
+    },
+    {
+      "title": "Vesuvius Challenge — Reading the Herculaneum Scrolls with AI",
+      "url": "https://scrollprize.org/",
+      "captured_at": "2026-06-25T22:39:31.917Z",
+      "status": "done"
+    },
+    {
+      "title": "an argmin year in review - by Ben Recht - arg min",
+      "url": "https://www.argmin.net/p/an-argmin-year-in-review",
+      "captured_at": "2026-06-25T16:03:44.556Z",
+      "status": "done"
+    },
+    {
+      "title": "Bluebird by Charles Bukowski - Famous poems, famous poets. - All Poetry",
+      "url": "https://allpoetry.com/poem/8509539-Bluebird-by-Charles-Bukowski",
+      "captured_at": "2026-06-25T15:57:58.038Z",
+      "status": "done"
+    },
+    {
+      "title": "The neural basis of laughter: Trends in Neurosciences",
+      "url": "https://www.cell.com/trends/neurosciences/fulltext/S0166-2236%2826%2900099-8",
+      "captured_at": "2026-06-25T15:53:20.057Z",
+      "status": "done"
+    },
+    {
+      "title": "Entropy | Special Issue : The Role of Information in Cultural Evolution",
+      "url": "https://www.mdpi.com/journal/entropy/special_issues/cult_evol",
+      "captured_at": "2026-06-25T15:32:50.843Z",
+      "status": "done"
+    },
+    {
+      "title": "Fake thinking and real thinking - Joe Carlsmith",
+      "url": "https://joecarlsmith.com/2025/01/28/fake-thinking-and-real-thinking/#3-examples",
+      "captured_at": "2026-06-25T15:31:10.695Z",
+      "status": "done"
+    },
+    {
+      "title": "Mr Cogito And The Imagination by Zbigniew Herbert - Famous poems, famous poets. - All Poetry",
+      "url": "https://allpoetry.com/Mr-Cogito-And-The-Imagination",
+      "captured_at": "2026-06-25T15:29:45.144Z",
+      "status": "done"
+    }
+  ]
+}

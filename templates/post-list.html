@@ -1,0 +1,18 @@
+<ul class="post-list">
+    $for(posts)$
+        <li class="post-item">
+            <div class="post-entry">
+                <div class="post-title">
+                    <a href="$url$">$title$</a>
+                    $if(description)$<p class="post-description">$description$</p>$endif$
+                    <div class="post-details">
+                        <span class="post-meta">$date$</span>
+$if(readtime)$<span class="post-readtime">$readtime$</span>$endif$
+$if(tags)$<span class="post-tags">$tags$</span>$endif$
+$if(categoryLabel)$<span class="post-category">$categoryLabel$</span>$endif$
+                    </div>
+                </div>
+            </div>
+        </li>
+    $endfor$
+</ul>

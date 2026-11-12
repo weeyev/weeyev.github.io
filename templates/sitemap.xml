@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>$siteRoot$/</loc></url>
+  <url><loc>$siteRoot$/archive.html</loc></url>
+  <url><loc>$siteRoot$/posts/links.html</loc></url>
+$for(posts)$
+  <url>
+    <loc>$canonicalUrl$</loc>
+    <lastmod>$dateIso$</lastmod>
+  </url>
+$endfor$
+</urlset>
