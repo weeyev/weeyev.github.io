@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://weeyev.github.io/sitemap.xml
